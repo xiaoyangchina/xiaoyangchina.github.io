@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/1.png?raw=true">
 <meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/2.png?raw=true">
 <meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/3.png?raw=true">
-<meta property="og:updated_time" content="2018-02-11T13:47:09.378Z">
+<meta property="og:updated_time" content="2018-02-24T09:36:59.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习- 监督学习模型详解">
 <meta name="twitter:description" content="接下来我们学习第一个算法，线性回归算法，通过该算法我们也可以更好的理解监督学习。假设我们有如下数据：   这个是某市房屋大小与价格的统计图。根据这个图的数据，假设你有一个朋友想卖房子让你给评估一下房子价格，那么你如何去做呢？  你或许会构造一个模型，如下图，然后把你朋友的房子的大小输入模型值，该模型就会给出你朋友房子的预测价格。  对于这样一个过程，我们就称作监督学习，我们使用已有数据集建立一">
@@ -62,7 +62,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -95,13 +95,13 @@
       
         <p>  接下来我们学习第一个算法，线性回归算法，通过该算法我们也可以更好的理解监督学习。假设我们有如下数据：</p>
 <p><img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/1.png?raw=true" alt=""><br>  这个是某市房屋大小与价格的统计图。根据这个图的数据，假设你有一个朋友想卖房子让你给评估一下房子价格，那么你如何去做呢？<br>  你或许会构造一个模型，如下图，然后把你朋友的房子的大小输入模型值，该模型就会给出你朋友房子的预测价格。<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/2.png?raw=true" alt="红线为预测模型"><br>  对于这样一个过程，我们就称作监督学习，我们使用已有数据集建立一个符合数据集的算法模型，然后通过该模型预测其他输入数据结果，即通过输入房子大小预测房屋价格。同时这也是一个回归模型，因为他的输出是连续的。<br>  监督学习的工作方式<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/3.png?raw=true" alt=""><br>  通过大量数据集推导出学习算法，再由算法推导出公式h；通过房子大小套用公式算出房价预测值。<br>  那我们如何表达这个公式h呢？</p>
-<p>$ h_\theta(x) = \theta_0 + \theta_1x $</p>
+<p>$$<br>h_\theta(x) = \theta_0 + \theta_1x<br>$$</p>
 <p>  OK,就到这里，下面将会讲解cost function。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cjdiujk4h00007zrgjhn8onjl" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cje1gpmpn00006crg48angjvq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -110,9 +110,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2018/02/24/机器学习——5-损失函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          机器学习——5 损失函数
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/02/07/机器学习笔记一3-测验/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">机器学习笔记一 测验</div>
     </a>
   
@@ -135,7 +144,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -145,9 +154,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/02/24/机器学习——5-损失函数/">机器学习——5 损失函数</a>
+          </li>
         
           <li>
             <a href="/2018/02/11/机器学习—4-监督学习模型详解/">机器学习- 监督学习模型详解</a>
