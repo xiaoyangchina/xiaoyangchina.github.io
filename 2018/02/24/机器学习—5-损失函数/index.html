@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>机器学习——5 损失函数 | XiaoYang的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="意义：损失函数是用来干什么的呢？回到我们上篇文章内容，我们通过现有数据总结出如下公式$$h_\theta(x) = \theta_0 + \theta_1x$$现在我们知道，这个公式就是我们给出的房价预测公式，但是，问题来了，我们如何获得最佳的θ0和θ1呢？在数学中，求最优解的方案之一是平方差公式。我们现在所知的内容有上面的公式hθ(x)和真实数据，对于θ0和θ1未知。在此条件下，我们随意设置一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习——5 损失函数">
+<meta property="og:url" content="http://yoursite.com/2018/02/24/机器学习—5-损失函数/index.html">
+<meta property="og:site_name" content="XiaoYang的博客">
+<meta property="og:description" content="意义：损失函数是用来干什么的呢？回到我们上篇文章内容，我们通过现有数据总结出如下公式$$h_\theta(x) = \theta_0 + \theta_1x$$现在我们知道，这个公式就是我们给出的房价预测公式，但是，问题来了，我们如何获得最佳的θ0和θ1呢？在数学中，求最优解的方案之一是平方差公式。我们现在所知的内容有上面的公式hθ(x)和真实数据，对于θ0和θ1未知。在此条件下，我们随意设置一个">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/4.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/5.png">
+<meta property="og:updated_time" content="2018-02-24T14:29:19.508Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习——5 损失函数">
+<meta name="twitter:description" content="意义：损失函数是用来干什么的呢？回到我们上篇文章内容，我们通过现有数据总结出如下公式$$h_\theta(x) = \theta_0 + \theta_1x$$现在我们知道，这个公式就是我们给出的房价预测公式，但是，问题来了，我们如何获得最佳的θ0和θ1呢？在数学中，求最优解的方案之一是平方差公式。我们现在所知的内容有上面的公式hθ(x)和真实数据，对于θ0和θ1未知。在此条件下，我们随意设置一个">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="XiaoYang的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XiaoYang的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">机器学习和Android</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-机器学习—5-损失函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/24/机器学习—5-损失函数/" class="article-date">
+  <time datetime="2018-02-24T08:19:26.000Z" itemprop="datePublished">2018-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      机器学习——5 损失函数
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="意义："><a href="#意义：" class="headerlink" title="意义："></a>意义：</h3><p>损失函数是用来干什么的呢？<br>回到我们上篇文章内容，我们通过现有数据总结出如下公式<br>$$<br>h_\theta(x) = \theta_0 + \theta_1x<br>$$<br>现在我们知道，这个公式就是我们给出的房价预测公式，但是，问题来了，我们如何获得最佳的θ0和θ1呢？<br>在数学中，求最优解的方案之一是平方差公式。<br>我们现在所知的内容有上面的公式hθ(x)和真实数据，对于θ0和θ1未知。在此条件下，我们随意设置一个θ0和θ1值，那么此时我们的公式hθ(x)已经成为了可计算的公式了。把真实数据的x代入公式hθ(x)，我们可以获取的一个推测的结果y‘。那么我们将问题转化一下就变成了如下：<br>$$<br>J(\theta_0, \theta<em>1) = \dfrac {1}{2m} \displaystyle \sum </em>{i=1}^m \left ( \hat{y}<em>{i}- y</em>{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum <em>{i=1}^m \left (h</em>\theta (x<em>{i}) - y</em>{i} \right)^2<br>$$<br>好，此时我们已经有思路来推导我们需要的公式了。下面我们来看一个例子：</p>
+<p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/1.png" alt="图1"></p>
+<p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/2.png" alt="图2"></p>
+<p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/3.png" alt="图3"></p>
+<p>图1中，我们选择了三个真实数据的点分别是(1，1)、(2，2)、(3、3)，那么我们让<code>θ0=0，θ1=1</code>得到关于hθ(x)的公式如图1中黑色实线，图1后面的图片是j(θ)，再做一个假设我们让<code>θ0=0，θ1=0.5</code>我们可以获取到的hθ(x)公式如图2中黑色实线，图2后面的图是j(θ)。最终经过一系列的类似的假设推导我们可以获取到一个关于θ1和平方差结果j(θ)的关系如图3。那么通过这个图我们就能知道<code>θ1=1</code>时我们可以得到最优解。</p>
+<p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/4.png" alt="图4"></p>
+<p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/5.png" alt="图5"></p>
+<p>当前的假设是基于<code>θ0=0</code>的前提下，那么如果θ0θ1都是变化的呢？<br>我们看到图3中，基于<code>θ0=0</code>的前提下J(θ)的变化图形，如果θ0也是变化的则它的变化图形是图4中的样子，三维的一个模型。那么如果我们要求J(θ)的最小值就是求该模型中最低点，也就是图5中同心圆的圆心。</p>
+<p>OK，就这些了，这就是损失函数的由来和求值思路。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cje1gu8jv00017lrgr7aho6xc" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/11/机器学习—4-监督学习模型详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">机器学习- 监督学习模型详解</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/02/24/机器学习—5-损失函数/">机器学习——5 损失函数</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/11/机器学习—4-监督学习模型详解/">机器学习- 监督学习模型详解</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/07/机器学习笔记一3-测验/">机器学习笔记一 测验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/04/机器学习笔记一2-监督学习和非监督学习/">机器学习笔记一 监督学习和非监督学习</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/03/机器学习笔记一1-什么是机器学习/">机器学习笔记一 什么是机器学习</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 XiaoYang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
