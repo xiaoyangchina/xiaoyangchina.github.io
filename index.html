@@ -54,7 +54,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,6 +64,58 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-机器学习—6-梯度下降" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/03/机器学习—6-梯度下降/" class="article-date">
+  <time datetime="2018-03-03T02:23:24.000Z" itemprop="datePublished">2018-03-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/03/机器学习—6-梯度下降/">机器学习— 梯度下降</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上节课中我们学习了损失函数J，那么接下来我们将学习梯度下降算法，这个算法可以用来求损失函数J的最小值。那么梯度下降算法是如何用来求解损失函数J的最小值呢？</p>
+<p>假设我们有一个损失函数，当然面对通用型问题是我们这个损失函数是不确定的，我们大概可以用一个关于n个θ的线性或非线性方程来表示J(θ0，θ1，θ2….θn)，为了方便学习我们假设我们需要的方程是一个仅有两个参数的J（θ0，θ1），这样我们的目标就变成了求能使J()最小的θ0，θ1。我们使用最通俗的办法我求J()最小值，分别给θ0和θ1一个值求J()，然后慢慢修改θ0，θ1的值，直到找到能使J()最小的θ0，θ1。针对不同的θ0，θ1和它们所对应的结果J()我们得到下面这张图：<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/1.png?raw=true" alt="图一">这是一个关于θ0，θ1和J()的几何图。那我们如何通过这张图找到最低点呢？很简单，我们只需要在这张图片上找到任意一点，然后通过该点像四周看一下，看看哪个方向是比当前这个点小的，然后我们就向该方向迈一小步，然后再重复此步骤，知道找到没办法在迈步的点，就是我们要的最低点。如图二<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/2.png?raw=true" alt="图二"><br>OK，道理讲明白了，接下来我们加入算法来看一下。</p>
+<p>$$<br>\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)<br>$$<br>这个公式就是梯度算法公式。下面我们来解释下这个公式的意义。</p>
+<p>当前这个公式是针对当前点的θ求下一个低一些的点的θ，其中θj的j分别是0和1。这么说可能大家还不太明白，那么我们说的再详细些，我们如何通过当前的θj求更接近J()最小值的θj呢，对照之前我们说的，其实我们就是找比当前点低一些的点。那如何去找这个点呢？用数学角度来说，我们就是求这个点的导数就可以了。在上面的公式中</p>
+<p>$$<br>\theta_j - \alpha \frac{\partial}{\partial \theta_j}J(\theta_0, \theta_1)<br>$$</p>
+<p>,α是学习率，它的作用是决定这你每次迈步的大小，α小就是步子小反之就是大（以多大的幅度更新θ）。而后面这段是一个微分，也就是求θj这点上的导数也就是斜率。请看下图</p>
+<p><img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/3.png?raw=true" alt="图三"></p>
+<p>通过计算θj这点的斜率我们可以更好的控制θ始终是向最低点“迈步”。</p>
+<p>而最终的梯度下降就是：重复运行</p>
+<p>$$<br>\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)<br>$$</p>
+<p>随着梯度算法的运行我们上面所说的导数会越来越小，越接近最小值时越小。</p>
+<p>好了上面就是梯度下降算法的意义，下面有几点需要注意下。</p>
+<p>对于α来说，如果太小，每次移动幅度都很小，那么就会增加非常多次计算；如果太大的话，有可能一次移动直接跨过了最低点，并且无法收敛甚至会发散，从而无法找到最低点，所以也是不好的。</p>
+<p>在线性回归模型中，要求最小J()，就是将梯度下降算法于平方差公式结合起来。</p>
+<p>$$<br>\begin{align<em>} \text{repeat until convergence: } \lbrace &amp; \newline \theta_0 := &amp; \theta<em>0 - \alpha \frac{1}{m} \sum\limits</em>{i=1}^{m}(h<em>\theta(x</em>{i}) - y_{i}) \newline \theta_1 := &amp; \theta<em>1 - \alpha \frac{1}{m} \sum\limits</em>{i=1}^{m}\left((h<em>\theta(x</em>{i}) - y<em>{i}) x</em>{i}\right) \newline \rbrace&amp; \end{align</em>}<br>$$</p>
+<p>OK, 就这些了！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjeaub0ii0000oprg8qv54zgz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-机器学习—5-损失函数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -100,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cje1gu8jv00017lrgr7aho6xc" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cjeaub0io0002oprg6ypfawvn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -140,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cje1gu8jq00007lrgy6t327zm" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cjeaub0im0001oprgljwxcd7a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -214,7 +266,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/07/机器学习笔记一3-测验/" data-id="cje1gu8k000047lrgmb92iwfk" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/07/机器学习笔记一3-测验/" data-id="cjeaub0is0005oprg7qmyg45z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -264,7 +316,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/04/机器学习笔记一2-监督学习和非监督学习/" data-id="cje1gu8jx00027lrgeip8145t" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/04/机器学习笔记一2-监督学习和非监督学习/" data-id="cjeaub0ir0004oprgofwwm7u6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -312,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/机器学习笔记一1-什么是机器学习/" data-id="cje1gu8jz00037lrgdrtqpfjf" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/03/机器学习笔记一1-什么是机器学习/" data-id="cjeaub0ip0003oprgro8s4ut3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -338,9 +390,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
   </div>
 
@@ -348,9 +400,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/03/03/机器学习—6-梯度下降/">机器学习— 梯度下降</a>
+          </li>
         
           <li>
             <a href="/2018/02/24/机器学习—5-损失函数/">机器学习——5 损失函数</a>
@@ -366,10 +422,6 @@
         
           <li>
             <a href="/2018/02/04/机器学习笔记一2-监督学习和非监督学习/">机器学习笔记一 监督学习和非监督学习</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/03/机器学习笔记一1-什么是机器学习/">机器学习笔记一 什么是机器学习</a>
           </li>
         
       </ul>
