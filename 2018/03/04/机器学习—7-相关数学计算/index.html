@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
 
   
   <title>机器学习—7 相关数学计算 | XiaoYang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="矩阵：$$\left [\begin{matrix}a &amp;amp; b &amp;amp; c\d &amp;amp; e &amp;amp; f\g &amp;amp; h &amp;amp; i\end{matrix}\right ] \tag{1}$$ 向量： $$\left [\begin{matrix}a\b\c\end{matrix}\right ] \tag{2}$$矩阵加法：$$\begin{bmatrix} a &amp;am">
+  <meta name="description" content="矩阵： \left [ \begin{matrix} a &amp; b &amp; c\\ d &amp; e &amp; f\\ g &amp; h &amp; i \end{matrix}  \right ] \tag{1}  向量： \left [ \begin{matrix} a\\ b\\ c \end{matrix} \right ] \tag{2}  矩阵加法： \begin{bmatrix} a &amp; b \newline c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习—7 相关数学计算">
 <meta property="og:url" content="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/index.html">
 <meta property="og:site_name" content="XiaoYang的博客">
-<meta property="og:description" content="矩阵：$$\left [\begin{matrix}a &amp;amp; b &amp;amp; c\d &amp;amp; e &amp;amp; f\g &amp;amp; h &amp;amp; i\end{matrix}\right ] \tag{1}$$ 向量： $$\left [\begin{matrix}a\b\c\end{matrix}\right ] \tag{2}$$矩阵加法：$$\begin{bmatrix} a &amp;am">
+<meta property="og:description" content="矩阵： \left [ \begin{matrix} a &amp; b &amp; c\\ d &amp; e &amp; f\\ g &amp; h &amp; i \end{matrix}  \right ] \tag{1}  向量： \left [ \begin{matrix} a\\ b\\ c \end{matrix} \right ] \tag{2}  矩阵加法： \begin{bmatrix} a &amp; b \newline c">
 <meta property="og:updated_time" content="2018-03-04T03:09:39.880Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习—7 相关数学计算">
-<meta name="twitter:description" content="矩阵：$$\left [\begin{matrix}a &amp;amp; b &amp;amp; c\d &amp;amp; e &amp;amp; f\g &amp;amp; h &amp;amp; i\end{matrix}\right ] \tag{1}$$ 向量： $$\left [\begin{matrix}a\b\c\end{matrix}\right ] \tag{2}$$矩阵加法：$$\begin{bmatrix} a &amp;am">
+<meta name="twitter:description" content="矩阵： \left [ \begin{matrix} a &amp; b &amp; c\\ d &amp; e &amp; f\\ g &amp; h &amp; i \end{matrix}  \right ] \tag{1}  向量： \left [ \begin{matrix} a\\ b\\ c \end{matrix} \right ] \tag{2}  矩阵加法： \begin{bmatrix} a &amp; b \newline c">
   
     <link rel="alternate" href="/atom.xml" title="XiaoYang的博客" type="application/atom+xml">
   
@@ -27,10 +27,11 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/style.css">
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
-  <div id="container">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
     <div id="wrap">
       <header id="header">
   <div id="banner"></div>
@@ -89,15 +90,64 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>矩阵：<br>$$<br>\left [<br>\begin{matrix}<br>a &amp; b &amp; c\<br>d &amp; e &amp; f\<br>g &amp; h &amp; i<br>\end{matrix}<br>\right ] \tag{1}<br>$$</p>
+        <p>矩阵：</p>
+\left [
+\begin{matrix}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{matrix} 
+\right ] \tag{1}
+
 <p>向量：</p>
-<p>$$<br>\left [<br>\begin{matrix}<br>a\<br>b\<br>c<br>\end{matrix}<br>\right ] \tag{2}<br>$$<br>矩阵加法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline \end{bmatrix} +\begin{bmatrix} w &amp; x \newline y &amp; z \newline \end{bmatrix} =\begin{bmatrix} a+w &amp; b+x \newline c+y &amp; d+z \newline \end{bmatrix}<br>$$<br>矩阵减法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline \end{bmatrix} - \begin{bmatrix} w &amp; x \newline y &amp; z \newline \end{bmatrix} =\begin{bmatrix} a-w &amp; b-x \newline c-y &amp; d-z \newline \end{bmatrix}<br>$$<br>矩阵乘法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline \end{bmatrix} <em> x =\begin{bmatrix} a</em>x &amp; b<em>x \newline c</em>x &amp; d<em>x \newline \end{bmatrix}<br>$$<br>矩阵除法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline \end{bmatrix} / x =\begin{bmatrix} a /x &amp; b/x \newline c /x &amp; d /x \newline \end{bmatrix}<br>$$<br>矩阵向量乘法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline e &amp; f \end{bmatrix} </em>\begin{bmatrix} x \newline y \newline \end{bmatrix} =\begin{bmatrix} a<em>x + b</em>y \newline c<em>x + d</em>y \newline e<em>x + f</em>y\end{bmatrix}<br>$$<br>矩阵矩阵乘法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline e &amp; f \end{bmatrix} <em>\begin{bmatrix} w &amp; x \newline y &amp; z \newline \end{bmatrix} =\begin{bmatrix} a</em>w + b<em>y &amp; a</em>x + b<em>z \newline c</em>w + d<em>y &amp; c</em>x + d<em>z \newline e</em>w + f<em>y &amp; e</em>x + f*z\end{bmatrix}<br>$$<br>Identity Matrix:<br>$$<br>\left[<br>\begin{matrix}<br>1 &amp; 0 &amp; 0 \<br>0 &amp; 1 &amp; 0 \<br>0 &amp; 0 &amp; 1<br>\end{matrix}<br>\right]<br>$$<br>矩阵的逆<br>$$<br>AA^{-1}=A^{-1}A=I<br>$$<br>矩阵的转置<br>$$<br>A = \begin{bmatrix} a &amp; b &amp; c \newline d &amp; e &amp; f \end{bmatrix}<br>A^T = \begin{bmatrix} a &amp; d \newline b &amp; e \newline c &amp; f \end{bmatrix}<br>$$</p>
+\left [
+\begin{matrix}
+a\\
+b\\
+c
+\end{matrix}
+\right ] \tag{2}
+
+<p>矩阵加法：</p>
+\begin{bmatrix} a & b \newline c & d \newline \end{bmatrix} +\begin{bmatrix} w & x \newline y & z \newline \end{bmatrix} =\begin{bmatrix} a+w & b+x \newline c+y & d+z \newline \end{bmatrix}
+
+<p>矩阵减法：</p>
+\begin{bmatrix} a & b \newline c & d \newline \end{bmatrix} - \begin{bmatrix} w & x \newline y & z \newline \end{bmatrix} =\begin{bmatrix} a-w & b-x \newline c-y & d-z \newline \end{bmatrix}
+
+<p>矩阵乘法：</p>
+\begin{bmatrix} a & b \newline c & d \newline \end{bmatrix} * x =\begin{bmatrix} a*x & b*x \newline c*x & d*x \newline \end{bmatrix}
+
+<p>矩阵除法：</p>
+\begin{bmatrix} a & b \newline c & d \newline \end{bmatrix} / x =\begin{bmatrix} a /x & b/x \newline c /x & d /x \newline \end{bmatrix}
+
+<p>矩阵向量乘法：</p>
+\begin{bmatrix} a & b \newline c & d \newline e & f \end{bmatrix} *\begin{bmatrix} x \newline y \newline \end{bmatrix} =\begin{bmatrix} a*x + b*y \newline c*x + d*y \newline e*x + f*y\end{bmatrix}
+
+<p>矩阵矩阵乘法：</p>
+\begin{bmatrix} a & b \newline c & d \newline e & f \end{bmatrix} *\begin{bmatrix} w & x \newline y & z \newline \end{bmatrix} =\begin{bmatrix} a*w + b*y & a*x + b*z \newline c*w + d*y & c*x + d*z \newline e*w + f*y & e*x + f*z\end{bmatrix}
+
+<p>Identity Matrix:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[
+\begin{matrix} 
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{matrix}
+\right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.05002em;"></span><span class="strut bottom" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="base displaystyle textstyle uncramped"><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9049999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-0.89502em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">1</span></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">1</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9049999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-0.89502em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></span></span></p>
+<p>矩阵的逆</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>A</mi><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">AA^{-1}=A^{-1}A=I
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.864108em;"></span><span class="strut bottom" style="height:0.864108em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit">A</span><span class="vlist"><span style="top:-0.41300000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathit">A</span><span class="vlist"><span style="top:-0.41300000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">A</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span></span></p>
+<p>矩阵的转置</p>
+A = \begin{bmatrix} a & b & c \newline d & e & f \end{bmatrix}
+A^T = \begin{bmatrix} a & d \newline b & e \newline c & f \end{bmatrix}
+
 <p>OK, 就这些了！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/" data-id="cjec7xmmd00039prgegviqc9v" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/" data-id="cjec8ce090003bvrgrehitgt4" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -203,6 +253,6 @@
 
 
 
-  </div>
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

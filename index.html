@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
 
   
@@ -23,10 +23,11 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/style.css">
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
-  <div id="container">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
     <div id="wrap">
       <header id="header">
   <div id="banner"></div>
@@ -87,15 +88,64 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>矩阵：<br>$$<br>\left [<br>\begin{matrix}<br>a &amp; b &amp; c\<br>d &amp; e &amp; f\<br>g &amp; h &amp; i<br>\end{matrix}<br>\right ] \tag{1}<br>$$</p>
+        <p>矩阵：</p>
+\left [
+\begin{matrix}
+a & b & c\\
+d & e & f\\
+g & h & i
+\end{matrix} 
+\right ] \tag{1}
+
 <p>向量：</p>
-<p>$$<br>\left [<br>\begin{matrix}<br>a\<br>b\<br>c<br>\end{matrix}<br>\right ] \tag{2}<br>$$<br>矩阵加法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline \end{bmatrix} +\begin{bmatrix} w &amp; x \newline y &amp; z \newline \end{bmatrix} =\begin{bmatrix} a+w &amp; b+x \newline c+y &amp; d+z \newline \end{bmatrix}<br>$$<br>矩阵减法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline \end{bmatrix} - \begin{bmatrix} w &amp; x \newline y &amp; z \newline \end{bmatrix} =\begin{bmatrix} a-w &amp; b-x \newline c-y &amp; d-z \newline \end{bmatrix}<br>$$<br>矩阵乘法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline \end{bmatrix} <em> x =\begin{bmatrix} a</em>x &amp; b<em>x \newline c</em>x &amp; d<em>x \newline \end{bmatrix}<br>$$<br>矩阵除法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline \end{bmatrix} / x =\begin{bmatrix} a /x &amp; b/x \newline c /x &amp; d /x \newline \end{bmatrix}<br>$$<br>矩阵向量乘法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline e &amp; f \end{bmatrix} </em>\begin{bmatrix} x \newline y \newline \end{bmatrix} =\begin{bmatrix} a<em>x + b</em>y \newline c<em>x + d</em>y \newline e<em>x + f</em>y\end{bmatrix}<br>$$<br>矩阵矩阵乘法：<br>$$<br>\begin{bmatrix} a &amp; b \newline c &amp; d \newline e &amp; f \end{bmatrix} <em>\begin{bmatrix} w &amp; x \newline y &amp; z \newline \end{bmatrix} =\begin{bmatrix} a</em>w + b<em>y &amp; a</em>x + b<em>z \newline c</em>w + d<em>y &amp; c</em>x + d<em>z \newline e</em>w + f<em>y &amp; e</em>x + f*z\end{bmatrix}<br>$$<br>Identity Matrix:<br>$$<br>\left[<br>\begin{matrix}<br>1 &amp; 0 &amp; 0 \<br>0 &amp; 1 &amp; 0 \<br>0 &amp; 0 &amp; 1<br>\end{matrix}<br>\right]<br>$$<br>矩阵的逆<br>$$<br>AA^{-1}=A^{-1}A=I<br>$$<br>矩阵的转置<br>$$<br>A = \begin{bmatrix} a &amp; b &amp; c \newline d &amp; e &amp; f \end{bmatrix}<br>A^T = \begin{bmatrix} a &amp; d \newline b &amp; e \newline c &amp; f \end{bmatrix}<br>$$</p>
+\left [
+\begin{matrix}
+a\\
+b\\
+c
+\end{matrix}
+\right ] \tag{2}
+
+<p>矩阵加法：</p>
+\begin{bmatrix} a & b \newline c & d \newline \end{bmatrix} +\begin{bmatrix} w & x \newline y & z \newline \end{bmatrix} =\begin{bmatrix} a+w & b+x \newline c+y & d+z \newline \end{bmatrix}
+
+<p>矩阵减法：</p>
+\begin{bmatrix} a & b \newline c & d \newline \end{bmatrix} - \begin{bmatrix} w & x \newline y & z \newline \end{bmatrix} =\begin{bmatrix} a-w & b-x \newline c-y & d-z \newline \end{bmatrix}
+
+<p>矩阵乘法：</p>
+\begin{bmatrix} a & b \newline c & d \newline \end{bmatrix} * x =\begin{bmatrix} a*x & b*x \newline c*x & d*x \newline \end{bmatrix}
+
+<p>矩阵除法：</p>
+\begin{bmatrix} a & b \newline c & d \newline \end{bmatrix} / x =\begin{bmatrix} a /x & b/x \newline c /x & d /x \newline \end{bmatrix}
+
+<p>矩阵向量乘法：</p>
+\begin{bmatrix} a & b \newline c & d \newline e & f \end{bmatrix} *\begin{bmatrix} x \newline y \newline \end{bmatrix} =\begin{bmatrix} a*x + b*y \newline c*x + d*y \newline e*x + f*y\end{bmatrix}
+
+<p>矩阵矩阵乘法：</p>
+\begin{bmatrix} a & b \newline c & d \newline e & f \end{bmatrix} *\begin{bmatrix} w & x \newline y & z \newline \end{bmatrix} =\begin{bmatrix} a*w + b*y & a*x + b*z \newline c*w + d*y & c*x + d*z \newline e*w + f*y & e*x + f*z\end{bmatrix}
+
+<p>Identity Matrix:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">[</mo><mtable><mtr><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[
+\begin{matrix} 
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{matrix}
+\right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.05002em;"></span><span class="strut bottom" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="base displaystyle textstyle uncramped"><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9049999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-0.89502em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">1</span></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">1</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist"><span style="top:-1.2099999999999997em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span style="top:-0.00999999999999951em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">0</span></span></span><span style="top:1.1900000000000006em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing mult"><span class="vlist"><span style="top:0.9049999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-0.89502em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></span></span></p>
+<p>矩阵的逆</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>A</mi><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">AA^{-1}=A^{-1}A=I
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.864108em;"></span><span class="strut bottom" style="height:0.864108em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">A</span><span class="mord"><span class="mord mathit">A</span><span class="vlist"><span style="top:-0.41300000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathit">A</span><span class="vlist"><span style="top:-0.41300000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">A</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.07847em;">I</span></span></span></span></span></p>
+<p>矩阵的转置</p>
+A = \begin{bmatrix} a & b & c \newline d & e & f \end{bmatrix}
+A^T = \begin{bmatrix} a & d \newline b & e \newline c & f \end{bmatrix}
+
 <p>OK, 就这些了！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/" data-id="cjec7xmmd00039prgegviqc9v" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/" data-id="cjec8ce090003bvrgrehitgt4" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -128,26 +178,32 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>上节课中我们学习了损失函数J，那么接下来我们将学习梯度下降算法，这个算法可以用来求损失函数J的最小值。那么梯度下降算法是如何用来求解损失函数J的最小值呢？</p>
-<p>假设我们有一个损失函数，当然面对通用型问题是我们这个损失函数是不确定的，我们大概可以用一个关于n个θ的线性或非线性方程来表示J(θ0，θ1，θ2….θn)，为了方便学习我们假设我们需要的方程是一个仅有两个参数的J（θ0，θ1），这样我们的目标就变成了求能使J()最小的θ0，θ1。我们使用最通俗的办法我求J()最小值，分别给θ0和θ1一个值求J()，然后慢慢修改θ0，θ1的值，直到找到能使J()最小的θ0，θ1。针对不同的θ0，θ1和它们所对应的结果J()我们得到下面这张图：<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/1.png?raw=true" alt="图一">这是一个关于θ0，θ1和J()的几何图。那我们如何通过这张图找到最低点呢？很简单，我们只需要在这张图片上找到任意一点，然后通过该点像四周看一下，看看哪个方向是比当前这个点小的，然后我们就向该方向迈一小步，然后再重复此步骤，知道找到没办法在迈步的点，就是我们要的最低点。如图二<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/2.png?raw=true" alt="图二"><br>OK，道理讲明白了，接下来我们加入算法来看一下。</p>
-<p>$$<br>\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)<br>$$<br>这个公式就是梯度算法公式。下面我们来解释下这个公式的意义。</p>
+<p>假设我们有一个损失函数，当然面对通用型问题是我们这个损失函数是不确定的，我们大概可以用一个关于n个θ的线性或非线性方程来表示J(θ0，θ1，θ2….θn)，为了方便学习我们假设我们需要的方程是一个仅有两个参数的J（θ0，θ1），这样我们的目标就变成了求能使J()最小的θ0，θ1。我们使用最通俗的办法我求J()最小值，分别给θ0和θ1一个值求J()，然后慢慢修改θ0，θ1的值，直到找到能使J()最小的θ0，θ1。针对不同的θ0，θ1和它们所对应的结果J()我们得到下面这张图：<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/1.png?raw=true" alt="图一">这是一个关于θ0，θ1和J()的几何图。那我们如何通过这张图找到最低点呢？很简单，我们只需要在这张图片上找到任意一点，然后通过该点像四周看一下，看看哪个方向是比当前这个点小的，然后我们就向该方向迈一小步，然后再重复此步骤，知道找到没办法在迈步的点，就是我们要的最低点。如图二<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/2.png?raw=true" alt="图二"><br>
+OK，道理讲明白了，接下来我们加入算法来看一下。</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>θ</mi><mi>j</mi></msub><mo>:</mo><mo>=</mo><msub><mi>θ</mi><mi>j</mi></msub><mo>−</mo><mi>α</mi><mfrac><mrow><mi mathvariant="normal">∂</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac><mi>J</mi><mo>(</mo><msub><mi>θ</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>θ</mi><mn>1</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.37144em;"></span><span class="strut bottom" style="height:2.343548em;vertical-align:-0.972108em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">:</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathit" style="margin-right:0.0037em;">α</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6859999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm" style="margin-right:0.05556em;">∂</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>这个公式就是梯度算法公式。下面我们来解释下这个公式的意义。</p>
 <p>当前这个公式是针对当前点的θ求下一个低一些的点的θ，其中θj的j分别是0和1。这么说可能大家还不太明白，那么我们说的再详细些，我们如何通过当前的θj求更接近J()最小值的θj呢，对照之前我们说的，其实我们就是找比当前点低一些的点。那如何去找这个点呢？用数学角度来说，我们就是求这个点的导数就可以了。在上面的公式中</p>
-<p>$$<br>\theta_j - \alpha \frac{\partial}{\partial \theta_j}J(\theta_0, \theta_1)<br>$$</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>θ</mi><mi>j</mi></msub><mo>−</mo><mi>α</mi><mfrac><mrow><mi mathvariant="normal">∂</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac><mi>J</mi><mo>(</mo><msub><mi>θ</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>θ</mi><mn>1</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">\theta_j - \alpha \frac{\partial}{\partial \theta_j}J(\theta_0, \theta_1)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.37144em;"></span><span class="strut bottom" style="height:2.343548em;vertical-align:-0.972108em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathit" style="margin-right:0.0037em;">α</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6859999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm" style="margin-right:0.05556em;">∂</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span></span></p>
 <p>,α是学习率，它的作用是决定这你每次迈步的大小，α小就是步子小反之就是大（以多大的幅度更新θ）。而后面这段是一个微分，也就是求θj这点上的导数也就是斜率。请看下图</p>
 <p><img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/3.png?raw=true" alt="图三"></p>
 <p>通过计算θj这点的斜率我们可以更好的控制θ始终是向最低点“迈步”。</p>
 <p>而最终的梯度下降就是：重复运行</p>
-<p>$$<br>\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)<br>$$</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>θ</mi><mi>j</mi></msub><mo>:</mo><mo>=</mo><msub><mi>θ</mi><mi>j</mi></msub><mo>−</mo><mi>α</mi><mfrac><mrow><mi mathvariant="normal">∂</mi></mrow><mrow><mi mathvariant="normal">∂</mi><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac><mi>J</mi><mo>(</mo><msub><mi>θ</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>θ</mi><mn>1</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.37144em;"></span><span class="strut bottom" style="height:2.343548em;vertical-align:-0.972108em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">:</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord mathit" style="margin-right:0.0037em;">α</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6859999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm" style="margin-right:0.05556em;">∂</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span></span></p>
 <p>随着梯度算法的运行我们上面所说的导数会越来越小，越接近最小值时越小。</p>
 <p>好了上面就是梯度下降算法的意义，下面有几点需要注意下。</p>
 <p>对于α来说，如果太小，每次移动幅度都很小，那么就会增加非常多次计算；如果太大的话，有可能一次移动直接跨过了最低点，并且无法收敛甚至会发散，从而无法找到最低点，所以也是不好的。</p>
 <p>在线性回归模型中，要求最小J()，就是将梯度下降算法于平方差公式结合起来。</p>
-<p>$$<br>\begin{align<em>} \text{repeat until convergence: } \lbrace &amp; \newline \theta_0 := &amp; \theta<em>0 - \alpha \frac{1}{m} \sum\limits</em>{i=1}^{m}(h<em>\theta(x</em>{i}) - y_{i}) \newline \theta_1 := &amp; \theta<em>1 - \alpha \frac{1}{m} \sum\limits</em>{i=1}^{m}\left((h<em>\theta(x</em>{i}) - y<em>{i}) x</em>{i}\right) \newline \rbrace&amp; \end{align</em>}<br>$$</p>
+\begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*}
+
 <p>OK, 就这些了！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjec7xmmb00029prgbitwq8ex" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjec8ce080002bvrgn72wt8fu" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -179,20 +235,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="意义："><a href="#意义：" class="headerlink" title="意义："></a>意义：</h3><p>损失函数是用来干什么的呢？<br>回到我们上篇文章内容，我们通过现有数据总结出如下公式<br>$$<br>h_\theta(x) = \theta_0 + \theta_1x<br>$$<br>现在我们知道，这个公式就是我们给出的房价预测公式，但是，问题来了，我们如何获得最佳的θ0和θ1呢？<br>在数学中，求最优解的方案之一是平方差公式。<br>我们现在所知的内容有上面的公式hθ(x)和真实数据，对于θ0和θ1未知。在此条件下，我们随意设置一个θ0和θ1值，那么此时我们的公式hθ(x)已经成为了可计算的公式了。把真实数据的x代入公式hθ(x)，我们可以获取的一个推测的结果y‘。那么我们将问题转化一下就变成了如下：<br>$$<br>J(\theta_0, \theta<em>1) = \dfrac {1}{2m} \displaystyle \sum </em>{i=1}^m \left ( \hat{y}<em>{i}- y</em>{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum <em>{i=1}^m \left (h</em>\theta (x<em>{i}) - y</em>{i} \right)^2<br>$$<br>好，此时我们已经有思路来推导我们需要的公式了。下面我们来看一个例子：</p>
+        <h3 id="意义"><a class="markdownIt-Anchor" href="#意义"></a> 意义：</h3>
+<p>损失函数是用来干什么的呢？<br>
+回到我们上篇文章内容，我们通过现有数据总结出如下公式</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>h</mi><mi>θ</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><msub><mi>θ</mi><mn>1</mn></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">h_\theta(x) = \theta_0 + \theta_1x
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit">h</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.02778em;">θ</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">x</span></span></span></span></span></p>
+<p>现在我们知道，这个公式就是我们给出的房价预测公式，但是，问题来了，我们如何获得最佳的θ0和θ1呢？<br>
+在数学中，求最优解的方案之一是平方差公式。<br>
+我们现在所知的内容有上面的公式hθ(x)和真实数据，对于θ0和θ1未知。在此条件下，我们随意设置一个θ0和θ1值，那么此时我们的公式hθ(x)已经成为了可计算的公式了。把真实数据的x代入公式hθ(x)，我们可以获取的一个推测的结果y‘。那么我们将问题转化一下就变成了如下：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi><mo>(</mo><msub><mi>θ</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>θ</mi><mn>1</mn></msub><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mstyle scriptlevel="0" displaystyle="true"><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup><msup><mrow><mo fence="true">(</mo><msub><mover accent="true"><mrow><mi>y</mi></mrow><mo>^</mo></mover><mrow><mi>i</mi></mrow></msub><mo>−</mo><msub><mi>y</mi><mrow><mi>i</mi></mrow></msub><mo fence="true">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mstyle scriptlevel="0" displaystyle="true"><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup><msup><mrow><mo fence="true">(</mo><msub><mi>h</mi><mi>θ</mi></msub><mo>(</mo><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo>)</mo><mo>−</mo><msub><mi>y</mi><mrow><mi>i</mi></mrow></msub><mo fence="true">)</mo></mrow><mn>2</mn></msup></mstyle></mstyle></mrow><annotation encoding="application/x-tex">J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.6513970000000002em;"></span><span class="strut bottom" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span><span class="mord mathit">m</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="reset-textstyle displaystyle textstyle uncramped"><span class="mop op-limits"><span class="vlist"><span style="top:1.1776689999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">i</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.000005000000000143778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="op-symbol large-op mop">∑</span></span></span><span style="top:-1.2500050000000003em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit">m</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="minner"><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span style="top:0em;margin-left:0.11112em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>^</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">−</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span><span class="mord mathit">m</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="reset-textstyle displaystyle textstyle uncramped"><span class="mop op-limits"><span class="vlist"><span style="top:1.1776689999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">i</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.000005000000000143778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="op-symbol large-op mop">∑</span></span></span><span style="top:-1.2500050000000003em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit">m</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="minner"><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord"><span class="mord mathit">h</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.02778em;">θ</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mbin">−</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></span></span></p>
+<p>好，此时我们已经有思路来推导我们需要的公式了。下面我们来看一个例子：</p>
 <p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/1.png" alt="图1"></p>
 <p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/2.png" alt="图2"></p>
 <p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/3.png" alt="图3"></p>
 <p>图1中，我们选择了三个真实数据的点分别是(1，1)、(2，2)、(3、3)，那么我们让<code>θ0=0，θ1=1</code>得到关于hθ(x)的公式如图1中黑色实线，图1后面的图片是j(θ)，再做一个假设我们让<code>θ0=0，θ1=0.5</code>我们可以获取到的hθ(x)公式如图2中黑色实线，图2后面的图是j(θ)。最终经过一系列的类似的假设推导我们可以获取到一个关于θ1和平方差结果j(θ)的关系如图3。那么通过这个图我们就能知道<code>θ1=1</code>时我们可以得到最优解。</p>
 <p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/4.png" alt="图4"></p>
 <p><img src="https://raw.githubusercontent.com/xiaoyangchina/images/master/blog_xiaoyangchina/ML/5/5.png" alt="图5"></p>
-<p>当前的假设是基于<code>θ0=0</code>的前提下，那么如果θ0θ1都是变化的呢？<br>我们看到图3中，基于<code>θ0=0</code>的前提下J(θ)的变化图形，如果θ0也是变化的则它的变化图形是图4中的样子，三维的一个模型。那么如果我们要求J(θ)的最小值就是求该模型中最低点，也就是图5中同心圆的圆心。</p>
+<p>当前的假设是基于<code>θ0=0</code>的前提下，那么如果θ0θ1都是变化的呢？<br>
+我们看到图3中，基于<code>θ0=0</code>的前提下J(θ)的变化图形，如果θ0也是变化的则它的变化图形是图4中的样子，三维的一个模型。那么如果我们要求J(θ)的最小值就是求该模型中最低点，也就是图5中同心圆的圆心。</p>
 <p>OK，就这些了，这就是损失函数的由来和求值思路。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cjec7xmm900019prgj99x0crw" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cjec8ce050001bvrgyvigmezx" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -224,15 +291,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  接下来我们学习第一个算法，线性回归算法，通过该算法我们也可以更好的理解监督学习。假设我们有如下数据：</p>
-<p><img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/1.png?raw=true" alt=""><br>  这个是某市房屋大小与价格的统计图。根据这个图的数据，假设你有一个朋友想卖房子让你给评估一下房子价格，那么你如何去做呢？<br>  你或许会构造一个模型，如下图，然后把你朋友的房子的大小输入模型值，该模型就会给出你朋友房子的预测价格。<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/2.png?raw=true" alt="红线为预测模型"><br>  对于这样一个过程，我们就称作监督学习，我们使用已有数据集建立一个符合数据集的算法模型，然后通过该模型预测其他输入数据结果，即通过输入房子大小预测房屋价格。同时这也是一个回归模型，因为他的输出是连续的。<br>  监督学习的工作方式<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/3.png?raw=true" alt=""><br>  通过大量数据集推导出学习算法，再由算法推导出公式h；通过房子大小套用公式算出房价预测值。<br>  那我们如何表达这个公式h呢？</p>
-<p>$$<br>h_\theta(x) = \theta_0 + \theta_1x<br>$$</p>
-<p>  OK,就到这里，下面将会讲解cost function。</p>
+        <p>接下来我们学习第一个算法，线性回归算法，通过该算法我们也可以更好的理解监督学习。假设我们有如下数据：</p>
+<p><img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/1.png?raw=true" alt=""><br>
+这个是某市房屋大小与价格的统计图。根据这个图的数据，假设你有一个朋友想卖房子让你给评估一下房子价格，那么你如何去做呢？<br>
+你或许会构造一个模型，如下图，然后把你朋友的房子的大小输入模型值，该模型就会给出你朋友房子的预测价格。<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/2.png?raw=true" alt="红线为预测模型"><br>
+对于这样一个过程，我们就称作监督学习，我们使用已有数据集建立一个符合数据集的算法模型，然后通过该模型预测其他输入数据结果，即通过输入房子大小预测房屋价格。同时这也是一个回归模型，因为他的输出是连续的。<br>
+监督学习的工作方式<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/3.png?raw=true" alt=""><br>
+通过大量数据集推导出学习算法，再由算法推导出公式h；通过房子大小套用公式算出房价预测值。<br>
+那我们如何表达这个公式h呢？</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>h</mi><mi>θ</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><msub><mi>θ</mi><mn>1</mn></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">h_\theta(x) = \theta_0 + \theta_1x 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit">h</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.02778em;">θ</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">x</span></span></span></span></span></p>
+<p>OK,就到这里，下面将会讲解cost function。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cjec7xmm500009prgp8miyqux" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cjec8ce000000bvrg4c5jwiil" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -265,27 +339,32 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li><p>一个程序被认为能从经验E中学习，解决任务T，达到性能度量值P，当且仅当，有了经验E，经P判定，程序处理T时性能有所提升。假设我们有一个关于天气数据的学习算法，它被用于预测天气，那么你认为P是什么？</p>
+<li>
+<p>一个程序被认为能从经验E中学习，解决任务T，达到性能度量值P，当且仅当，有了经验E，经P判定，程序处理T时性能有所提升。假设我们有一个关于天气数据的学习算法，它被用于预测天气，那么你认为P是什么？</p>
 <p>a. 选项都不对</p>
 <p>b. 天气预测任务</p>
 <p>c. 预测天气的准确性</p>
 <p>d. 处理大量天气数据过程</p>
 </li>
-<li><p>降雨一般用mm来测量。如果你开发了一个算法可以预测明天的降雨量，那这个算法属于什么？</p>
+<li>
+<p>降雨一般用mm来测量。如果你开发了一个算法可以预测明天的降雨量，那这个算法属于什么？</p>
 <p>a. 回归算法</p>
 <p>b. 分类算法</p>
 </li>
-<li><p>如果你的工作是股票预测，你想要开发一个算法来预测明天的股票价格。那么你觉得这是一个回归算法还是一个分类算法？</p>
+<li>
+<p>如果你的工作是股票预测，你想要开发一个算法来预测明天的股票价格。那么你觉得这是一个回归算法还是一个分类算法？</p>
 <p>a. 回归算法</p>
 <p>b. 分类算法</p>
 </li>
-<li><p>有一些算法需要监督学习来处理，而另外一些需要非监督学习算法来处理。下面哪一种需要用监督学习算法？</p>
+<li>
+<p>有一些算法需要监督学习来处理，而另外一些需要非监督学习算法来处理。下面哪一种需要用监督学习算法？</p>
 <p>a. 给出关于1000名医疗患者如何对实验药物作出反应的数据（例如治疗的有效性，副作用等），从患者对药物的反应方面来看，是否存在不同的类别或“类型” 如果是这些类别是什么。</p>
 <p>b. 从一个人的遗传（DNA）数据，预测他/她在未来10年发展糖尿病的几率。</p>
 <p>c. 让计算机检查音乐片段的音频片段，并分类该音频片段中是否有人声（即人声唱歌），或者是否只是乐器（而不是人声）的片段。</p>
 <p>d. 鉴于来自患有心脏病的患者的医疗记录的大数据集，尝试了解是否可能存在不同的这样的患者群，为此我们可以量身定制单独的治疗方法。</p>
 </li>
-<li><p>下面哪一个是机器学习的合理定义？</p>
+<li>
+<p>下面哪一个是机器学习的合理定义？</p>
 <p>a. 机器学习是允许机器人聪明行事的领域。</p>
 <p>b. 机器学习从有标签的数据中学习</p>
 <p>c. 机器学习是使计算机在没有明确程序下拥有学习能力的领域</p>
@@ -293,20 +372,20 @@
 </li>
 </ol>
 <blockquote>
-<p> 答案：</p>
+<p>答案：</p>
 <ol>
 <li>c。对性能的度量</li>
 <li>a。连续输出值</li>
 <li>a。连续输出值</li>
 <li>b、c</li>
-<li>c  </li>
+<li>c</li>
 </ol>
 </blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/07/机器学习笔记一3-测验/" data-id="cjec7xmmf00059prgmc3o8pvq" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/07/机器学习笔记一3-测验/" data-id="cjec8ce0d0006bvrgeamp813b" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -339,24 +418,34 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>机器学习目前有几种不同类型的学习算法，其中主要的两种是监督学习和非监督学习，下面我们就来介绍下这两种算法。</p>
-<h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><h4 id="监督学习："><a href="#监督学习：" class="headerlink" title="监督学习："></a>监督学习：</h4><p>在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散函数去适配输入。</p>
-<h4 id="非监督学习："><a href="#非监督学习：" class="headerlink" title="非监督学习："></a>非监督学习：</h4><p>非监督学习允许我们在不知道问题结果是什么样的情况下通过算法得到结果。我们从不知道变量影响的情况下推导出结构。</p>
-<h3 id="事例说明："><a href="#事例说明：" class="headerlink" title="事例说明："></a>事例说明：</h3><h4 id="监督学习：-1"><a href="#监督学习：-1" class="headerlink" title="监督学习："></a>监督学习：</h4><p>回归问题，房价预测。我们有大量的数据，数据内容是有关房子大小和房价的，我们可以根据这些数据推导出一个直线或者曲线函数来适配这些数据，从而我们就可以根据这些函数去预测其他将要销售房子的价格了，当然现实生活中影响房价的因素不只是房子大小。所以在这个过程中我们必须要知道部分有明确结果的数据即我们知道已经卖出房子的大小和该房子卖出的价格，从而我们才能推导出一个函数来适配我们已有的数据走向。这种问题就叫做回归问题（预测一个连续值的输出）。<br>分类问题，肿瘤预测。对于肿瘤我们知道有良性有恶性，如果我们有一个算法模型能够通过一系列的症状输入给出肿瘤是良性还是恶性的判断的话，那将给生活带来更多的便捷。让我们来了解一个示例。我们有一个已经收集好的数据集，假设这个数据集上有一个输入(肿瘤大小)一个输出(该肿瘤是良性还是恶性)，数据如图所示，那么根据这个数据集我们可以推导出一个公式用来判断一个固定大小的肿瘤是良性还是恶性的。这种问题就叫做分类问题(预测一个离散的输出，这里是二分类)。我们还可以对此给出更为复杂的模型，比如输入有两个，一个是肿瘤大小，一个是年龄大小，对应的数据有明确输出(当前是良性还是恶性)。如图<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/2/classify.png?raw=true" alt=""></p>
+<h3 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义：</h3>
+<h4 id="监督学习"><a class="markdownIt-Anchor" href="#监督学习"></a> 监督学习：</h4>
+<p>在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散函数去适配输入。</p>
+<h4 id="非监督学习"><a class="markdownIt-Anchor" href="#非监督学习"></a> 非监督学习：</h4>
+<p>非监督学习允许我们在不知道问题结果是什么样的情况下通过算法得到结果。我们从不知道变量影响的情况下推导出结构。</p>
+<h3 id="事例说明"><a class="markdownIt-Anchor" href="#事例说明"></a> 事例说明：</h3>
+<h4 id="监督学习-2"><a class="markdownIt-Anchor" href="#监督学习-2"></a> 监督学习：</h4>
+<p>回归问题，房价预测。我们有大量的数据，数据内容是有关房子大小和房价的，我们可以根据这些数据推导出一个直线或者曲线函数来适配这些数据，从而我们就可以根据这些函数去预测其他将要销售房子的价格了，当然现实生活中影响房价的因素不只是房子大小。所以在这个过程中我们必须要知道部分有明确结果的数据即我们知道已经卖出房子的大小和该房子卖出的价格，从而我们才能推导出一个函数来适配我们已有的数据走向。这种问题就叫做回归问题（预测一个连续值的输出）。<br>
+分类问题，肿瘤预测。对于肿瘤我们知道有良性有恶性，如果我们有一个算法模型能够通过一系列的症状输入给出肿瘤是良性还是恶性的判断的话，那将给生活带来更多的便捷。让我们来了解一个示例。我们有一个已经收集好的数据集，假设这个数据集上有一个输入(肿瘤大小)一个输出(该肿瘤是良性还是恶性)，数据如图所示，那么根据这个数据集我们可以推导出一个公式用来判断一个固定大小的肿瘤是良性还是恶性的。这种问题就叫做分类问题(预测一个离散的输出，这里是二分类)。我们还可以对此给出更为复杂的模型，比如输入有两个，一个是肿瘤大小，一个是年龄大小，对应的数据有明确输出(当前是良性还是恶性)。如图<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/2/classify.png?raw=true" alt=""></p>
 <blockquote>
 <p>如果是这样的话，现实生活中对一个问题影响的因素非常多，比如房子大小、房间数、房子年龄、房子位置、装修等等都会影响房价，那我们如何把这些因素都存入电脑还能避免溢出呢？等学到向量机我们就知道了。</p>
 </blockquote>
-<h4 id="非监督学习：-1"><a href="#非监督学习：-1" class="headerlink" title="非监督学习："></a>非监督学习：</h4><p>在你使用google搜索的时候，比如你搜一个新闻，你会发现Google会返回给你同类型一系列的新闻，没错在这个地方google就使用了非监督学习，google每天都会搜集新闻然后用非监督学习算法，让程序自动将新闻分类。这就是非监督学习，我们没有提前告诉程序说这是一类新闻这又是另外一类，甚至我们都不知道某一条新闻属于哪一类，然后算法会自动按类型把不同新闻归类。<br>此外非监督学习在其他领域也有大量应用：</p>
+<h4 id="非监督学习-2"><a class="markdownIt-Anchor" href="#非监督学习-2"></a> 非监督学习：</h4>
+<p>在你使用google搜索的时候，比如你搜一个新闻，你会发现Google会返回给你同类型一系列的新闻，没错在这个地方google就使用了非监督学习，google每天都会搜集新闻然后用非监督学习算法，让程序自动将新闻分类。这就是非监督学习，我们没有提前告诉程序说这是一类新闻这又是另外一类，甚至我们都不知道某一条新闻属于哪一类，然后算法会自动按类型把不同新闻归类。<br>
+此外非监督学习在其他领域也有大量应用：</p>
 <ul>
 <li>组织大型计算机集群</li>
 <li>应用于社交网络分析</li>
 <li>市场分割</li>
-<li>天文分析<br>当然聚类只是非监督学习的一种用法之一，另外还有鸡尾酒问题等等。</li>
+<li>天文分析<br>
+当然聚类只是非监督学习的一种用法之一，另外还有鸡尾酒问题等等。</li>
 </ul>
-<h4 id="OK，就到这里。"><a href="#OK，就到这里。" class="headerlink" title="OK，就到这里。"></a>OK，就到这里。</h4>
+<h4 id="ok就到这里"><a class="markdownIt-Anchor" href="#ok就到这里"></a> OK，就到这里。</h4>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/04/机器学习笔记一2-监督学习和非监督学习/" data-id="cjec7xmmg00069prg3gyqgc78" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/04/机器学习笔记一2-监督学习和非监督学习/" data-id="cjec8ce0c0005bvrg4d9svqxx" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -388,23 +477,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="机器学习笔记一"><a href="#机器学习笔记一" class="headerlink" title="机器学习笔记一"></a>机器学习笔记一</h3><h3 id="什么是机器学习"><a href="#什么是机器学习" class="headerlink" title="什么是机器学习"></a>什么是机器学习</h3><blockquote>
+        <h3 id="机器学习笔记一"><a class="markdownIt-Anchor" href="#机器学习笔记一"></a> 机器学习笔记一</h3>
+<h3 id="什么是机器学习"><a class="markdownIt-Anchor" href="#什么是机器学习"></a> 什么是机器学习</h3>
+<blockquote>
 <p>声明：本博客在为另外声明之前是以吴恩达教授的课程为学习素材进行学习的</p>
 </blockquote>
-<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>如果你从未接触过机器学习，觉得这是一个高深且离你很远的学科的话，那你就错了，如今部分机器学习技术已经深入了我们的生活。比如，我们日常使用的Google搜索，它使用了机器学习对网页的展示进行排序使网页搜索的结果更符合你的预期；再比如我们使用的iphone手机中的相册，它可以认出你或者你的朋友；又或者是你邮箱的垃圾邮件分类器，也是应用了机器学习来智能识别一封邮件到底是正常邮件还是垃圾邮件。这些都是因为电脑程序学会了怎么将搜索分类，怎么去识别你自己还是你朋友的照片，也学会了如何区分一封邮件是垃圾邮件还是正常邮件。<br>那么我们如何让程序去学习这些内容呢？<br>我们可以让机器模仿我们，比如让机器人看我们如何拿放东西，然后试着做同样的事情，以至于当你不在的时候它也会拿放东西。很多科学家认为最好的机器学习算法是通过模仿人类大脑构建的神经网络算法。而这也是我们接下来要学习的东西。<br>那为什么机器学习这么流行呢？</p>
+<h4 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h4>
+<p>如果你从未接触过机器学习，觉得这是一个高深且离你很远的学科的话，那你就错了，如今部分机器学习技术已经深入了我们的生活。比如，我们日常使用的Google搜索，它使用了机器学习对网页的展示进行排序使网页搜索的结果更符合你的预期；再比如我们使用的iphone手机中的相册，它可以认出你或者你的朋友；又或者是你邮箱的垃圾邮件分类器，也是应用了机器学习来智能识别一封邮件到底是正常邮件还是垃圾邮件。这些都是因为电脑程序学会了怎么将搜索分类，怎么去识别你自己还是你朋友的照片，也学会了如何区分一封邮件是垃圾邮件还是正常邮件。<br>
+那么我们如何让程序去学习这些内容呢？<br>
+我们可以让机器模仿我们，比如让机器人看我们如何拿放东西，然后试着做同样的事情，以至于当你不在的时候它也会拿放东西。很多科学家认为最好的机器学习算法是通过模仿人类大脑构建的神经网络算法。而这也是我们接下来要学习的东西。<br>
+那为什么机器学习这么流行呢？</p>
 <ul>
 <li>它为AI而生</li>
-<li>为计算机带来了新的能力<br>机器学习的其他例子还包括：</li>
+<li>为计算机带来了新的能力<br>
+机器学习的其他例子还包括：</li>
 <li>数据挖掘；随着互联网的增长，数据大量增长，所以对数据准确的分析挖掘显得尤为重要，例如：网页的点击分析，医疗记录分析转化为医学知识，生物科技比如收集大量DNA信息等</li>
 <li>无法手动编写的程序；比如自动驾驶技术，手动编写程序是几乎不可能让汽车学会如何驾驶的，唯一可行的解决方案是让电脑学会自主的学习如何驾驶。再比如手写字体识别，让计算机学会不同笔记的识别从而解放了大量人力资源。</li>
 <li>量身定制内容；比如iTunes为你量身定制推荐电影或产品。面对于千万级别的用户，认为编写程序去实现真正的量身定制基本是不可能的，我们只有通过让计算机学会如何根据不同人的喜好推荐不同的东西。</li>
-<li>反过来研究人类的学习机制。通过机器学习反向分解人类大脑如何学习的。<h4 id="什么是机器学习-1"><a href="#什么是机器学习-1" class="headerlink" title="什么是机器学习"></a>什么是机器学习</h4>略去繁杂的机器学习历史，我们来直接定义机器学习。<br><strong>一个程序被认为能从经验E中学习，解决任务T，达到性能度量值P，当且仅当，有了经验E，经P判定，程序处理T时性能有所提升。</strong><br>下面有个小例子帮你理解一下：<br><em>我们假设您的电子邮件程序会观察收到的邮件是否被你标记为垃圾邮件。在这种Email客户端中，你点击“垃圾邮件”按钮 报告某些email为垃圾邮件，不会影响别的邮件。基于被标记为垃圾的邮件， 您的电子邮件程序能更好地学习如何过滤垃圾邮件。请问， 在这个设定中，任务 T 是什么？<br>答案是：区分电子是垃圾邮件还是正常邮件。</em></li>
+<li>反过来研究人类的学习机制。通过机器学习反向分解人类大脑如何学习的。</li>
 </ul>
-<h4 id="OK，就到这里。"><a href="#OK，就到这里。" class="headerlink" title="OK，就到这里。"></a>OK，就到这里。</h4>
+<h4 id="什么是机器学习-2"><a class="markdownIt-Anchor" href="#什么是机器学习-2"></a> 什么是机器学习</h4>
+<p>略去繁杂的机器学习历史，我们来直接定义机器学习。<br>
+<strong>一个程序被认为能从经验E中学习，解决任务T，达到性能度量值P，当且仅当，有了经验E，经P判定，程序处理T时性能有所提升。</strong><br>
+下面有个小例子帮你理解一下：<br>
+<em>我们假设您的电子邮件程序会观察收到的邮件是否被你标记为垃圾邮件。在这种Email客户端中，你点击“垃圾邮件”按钮 报告某些email为垃圾邮件，不会影响别的邮件。基于被标记为垃圾的邮件， 您的电子邮件程序能更好地学习如何过滤垃圾邮件。请问， 在这个设定中，任务 T 是什么？<br>
+答案是：区分电子是垃圾邮件还是正常邮件。</em></p>
+<h4 id="ok就到这里"><a class="markdownIt-Anchor" href="#ok就到这里"></a> OK，就到这里。</h4>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/机器学习笔记一1-什么是机器学习/" data-id="cjec7xmme00049prgn03u96gd" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/03/机器学习笔记一1-什么是机器学习/" data-id="cjec8ce0b0004bvrg2gw92u5r" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -502,6 +605,6 @@
 
 
 
-  </div>
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

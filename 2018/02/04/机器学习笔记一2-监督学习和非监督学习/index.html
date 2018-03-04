@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
 
   
   <title>机器学习笔记一 监督学习和非监督学习 | XiaoYang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="机器学习目前有几种不同类型的学习算法，其中主要的两种是监督学习和非监督学习，下面我们就来介绍下这两种算法。 定义：监督学习：在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散函数去适">
+  <meta name="description" content="机器学习目前有几种不同类型的学习算法，其中主要的两种是监督学习和非监督学习，下面我们就来介绍下这两种算法。  定义：  监督学习： 在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习笔记一 监督学习和非监督学习">
 <meta property="og:url" content="http://yoursite.com/2018/02/04/机器学习笔记一2-监督学习和非监督学习/index.html">
 <meta property="og:site_name" content="XiaoYang的博客">
-<meta property="og:description" content="机器学习目前有几种不同类型的学习算法，其中主要的两种是监督学习和非监督学习，下面我们就来介绍下这两种算法。 定义：监督学习：在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散函数去适">
+<meta property="og:description" content="机器学习目前有几种不同类型的学习算法，其中主要的两种是监督学习和非监督学习，下面我们就来介绍下这两种算法。  定义：  监督学习： 在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散">
 <meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/2/classify.png?raw=true">
 <meta property="og:updated_time" content="2018-02-05T08:50:51.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习笔记一 监督学习和非监督学习">
-<meta name="twitter:description" content="机器学习目前有几种不同类型的学习算法，其中主要的两种是监督学习和非监督学习，下面我们就来介绍下这两种算法。 定义：监督学习：在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散函数去适">
+<meta name="twitter:description" content="机器学习目前有几种不同类型的学习算法，其中主要的两种是监督学习和非监督学习，下面我们就来介绍下这两种算法。  定义：  监督学习： 在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散">
 <meta name="twitter:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/2/classify.png?raw=true">
   
     <link rel="alternate" href="/atom.xml" title="XiaoYang的博客" type="application/atom+xml">
@@ -29,10 +29,11 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/style.css">
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
-  <div id="container">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
     <div id="wrap">
       <header id="header">
   <div id="banner"></div>
@@ -92,24 +93,34 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>机器学习目前有几种不同类型的学习算法，其中主要的两种是监督学习和非监督学习，下面我们就来介绍下这两种算法。</p>
-<h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><h4 id="监督学习："><a href="#监督学习：" class="headerlink" title="监督学习："></a>监督学习：</h4><p>在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散函数去适配输入。</p>
-<h4 id="非监督学习："><a href="#非监督学习：" class="headerlink" title="非监督学习："></a>非监督学习：</h4><p>非监督学习允许我们在不知道问题结果是什么样的情况下通过算法得到结果。我们从不知道变量影响的情况下推导出结构。</p>
-<h3 id="事例说明："><a href="#事例说明：" class="headerlink" title="事例说明："></a>事例说明：</h3><h4 id="监督学习：-1"><a href="#监督学习：-1" class="headerlink" title="监督学习："></a>监督学习：</h4><p>回归问题，房价预测。我们有大量的数据，数据内容是有关房子大小和房价的，我们可以根据这些数据推导出一个直线或者曲线函数来适配这些数据，从而我们就可以根据这些函数去预测其他将要销售房子的价格了，当然现实生活中影响房价的因素不只是房子大小。所以在这个过程中我们必须要知道部分有明确结果的数据即我们知道已经卖出房子的大小和该房子卖出的价格，从而我们才能推导出一个函数来适配我们已有的数据走向。这种问题就叫做回归问题（预测一个连续值的输出）。<br>分类问题，肿瘤预测。对于肿瘤我们知道有良性有恶性，如果我们有一个算法模型能够通过一系列的症状输入给出肿瘤是良性还是恶性的判断的话，那将给生活带来更多的便捷。让我们来了解一个示例。我们有一个已经收集好的数据集，假设这个数据集上有一个输入(肿瘤大小)一个输出(该肿瘤是良性还是恶性)，数据如图所示，那么根据这个数据集我们可以推导出一个公式用来判断一个固定大小的肿瘤是良性还是恶性的。这种问题就叫做分类问题(预测一个离散的输出，这里是二分类)。我们还可以对此给出更为复杂的模型，比如输入有两个，一个是肿瘤大小，一个是年龄大小，对应的数据有明确输出(当前是良性还是恶性)。如图<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/2/classify.png?raw=true" alt=""></p>
+<h3 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义：</h3>
+<h4 id="监督学习"><a class="markdownIt-Anchor" href="#监督学习"></a> 监督学习：</h4>
+<p>在监督学习中，我们给出数据集，并且我们已知该数据集部分数据的输出，知晓输入和输出的关系。监督学习分为“回归问题”和“分类问题”。“回归问题”就是输出结果是连续的问题，也就是说我们试图用一个连续函数去适配输入。“分类问题”就是输出结果是离散型数据，也就是说试图用一个离散函数去适配输入。</p>
+<h4 id="非监督学习"><a class="markdownIt-Anchor" href="#非监督学习"></a> 非监督学习：</h4>
+<p>非监督学习允许我们在不知道问题结果是什么样的情况下通过算法得到结果。我们从不知道变量影响的情况下推导出结构。</p>
+<h3 id="事例说明"><a class="markdownIt-Anchor" href="#事例说明"></a> 事例说明：</h3>
+<h4 id="监督学习-2"><a class="markdownIt-Anchor" href="#监督学习-2"></a> 监督学习：</h4>
+<p>回归问题，房价预测。我们有大量的数据，数据内容是有关房子大小和房价的，我们可以根据这些数据推导出一个直线或者曲线函数来适配这些数据，从而我们就可以根据这些函数去预测其他将要销售房子的价格了，当然现实生活中影响房价的因素不只是房子大小。所以在这个过程中我们必须要知道部分有明确结果的数据即我们知道已经卖出房子的大小和该房子卖出的价格，从而我们才能推导出一个函数来适配我们已有的数据走向。这种问题就叫做回归问题（预测一个连续值的输出）。<br>
+分类问题，肿瘤预测。对于肿瘤我们知道有良性有恶性，如果我们有一个算法模型能够通过一系列的症状输入给出肿瘤是良性还是恶性的判断的话，那将给生活带来更多的便捷。让我们来了解一个示例。我们有一个已经收集好的数据集，假设这个数据集上有一个输入(肿瘤大小)一个输出(该肿瘤是良性还是恶性)，数据如图所示，那么根据这个数据集我们可以推导出一个公式用来判断一个固定大小的肿瘤是良性还是恶性的。这种问题就叫做分类问题(预测一个离散的输出，这里是二分类)。我们还可以对此给出更为复杂的模型，比如输入有两个，一个是肿瘤大小，一个是年龄大小，对应的数据有明确输出(当前是良性还是恶性)。如图<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/2/classify.png?raw=true" alt=""></p>
 <blockquote>
 <p>如果是这样的话，现实生活中对一个问题影响的因素非常多，比如房子大小、房间数、房子年龄、房子位置、装修等等都会影响房价，那我们如何把这些因素都存入电脑还能避免溢出呢？等学到向量机我们就知道了。</p>
 </blockquote>
-<h4 id="非监督学习：-1"><a href="#非监督学习：-1" class="headerlink" title="非监督学习："></a>非监督学习：</h4><p>在你使用google搜索的时候，比如你搜一个新闻，你会发现Google会返回给你同类型一系列的新闻，没错在这个地方google就使用了非监督学习，google每天都会搜集新闻然后用非监督学习算法，让程序自动将新闻分类。这就是非监督学习，我们没有提前告诉程序说这是一类新闻这又是另外一类，甚至我们都不知道某一条新闻属于哪一类，然后算法会自动按类型把不同新闻归类。<br>此外非监督学习在其他领域也有大量应用：</p>
+<h4 id="非监督学习-2"><a class="markdownIt-Anchor" href="#非监督学习-2"></a> 非监督学习：</h4>
+<p>在你使用google搜索的时候，比如你搜一个新闻，你会发现Google会返回给你同类型一系列的新闻，没错在这个地方google就使用了非监督学习，google每天都会搜集新闻然后用非监督学习算法，让程序自动将新闻分类。这就是非监督学习，我们没有提前告诉程序说这是一类新闻这又是另外一类，甚至我们都不知道某一条新闻属于哪一类，然后算法会自动按类型把不同新闻归类。<br>
+此外非监督学习在其他领域也有大量应用：</p>
 <ul>
 <li>组织大型计算机集群</li>
 <li>应用于社交网络分析</li>
 <li>市场分割</li>
-<li>天文分析<br>当然聚类只是非监督学习的一种用法之一，另外还有鸡尾酒问题等等。</li>
+<li>天文分析<br>
+当然聚类只是非监督学习的一种用法之一，另外还有鸡尾酒问题等等。</li>
 </ul>
-<h4 id="OK，就到这里。"><a href="#OK，就到这里。" class="headerlink" title="OK，就到这里。"></a>OK，就到这里。</h4>
+<h4 id="ok就到这里"><a class="markdownIt-Anchor" href="#ok就到这里"></a> OK，就到这里。</h4>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/04/机器学习笔记一2-监督学习和非监督学习/" data-id="cjec7xmmg00069prg3gyqgc78" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/04/机器学习笔记一2-监督学习和非监督学习/" data-id="cjec8ce0c0005bvrg4d9svqxx" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -224,6 +235,6 @@
 
 
 
-  </div>
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
