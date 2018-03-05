@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/1.png?raw=true">
 <meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/2.png?raw=true">
 <meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/6/3.png?raw=true">
-<meta property="og:updated_time" content="2018-03-05T02:09:19.456Z">
+<meta property="og:updated_time" content="2018-03-05T02:54:39.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习— 梯度下降">
 <meta name="twitter:description" content="上节课中我们学习了损失函数J，那么接下来我们将学习梯度下降算法，这个算法可以用来求损失函数J的最小值。那么梯度下降算法是如何用来求解损失函数J的最小值呢？ 假设我们有一个损失函数，当然面对通用型问题是我们这个损失函数是不确定的，我们大概可以用一个关于n个θ的线性或非线性方程来表示J(θ0，θ1，θ2….θn)，为了方便学习我们假设我们需要的方程是一个仅有两个参数的J（θ0，θ1），这样我们的目标就">
@@ -113,14 +113,14 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
 <p>好了上面就是梯度下降算法的意义，下面有几点需要注意下。</p>
 <p>对于α来说，如果太小，每次移动幅度都很小，那么就会增加非常多次计算；如果太大的话，有可能一次移动直接跨过了最低点，并且无法收敛甚至会发散，从而无法找到最低点，所以也是不好的。</p>
 <p>在线性回归模型中，要求最小J()，就是将梯度下降算法于平方差公式结合起来。</p>
-\begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*}
+\begin{align*} \text{repeat until convergence:} \lbrace & \\ \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \\ \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \\ \rbrace& \end{align*}
 
 <p>OK, 就这些了！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjedmolah0005yorge57e55ib" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjedmu1lk0003zfrg4h8t05hi" class="article-share-link">Teilen</a>
       
       
     </footer>
