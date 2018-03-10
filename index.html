@@ -55,7 +55,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -65,6 +65,124 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-机器学习—8-Octave工具" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/08/机器学习—8-Octave工具/" class="article-date">
+  <time datetime="2018-03-08T12:59:53.000Z" itemprop="datePublished">2018-03-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/08/机器学习—8-Octave工具/">机器学习—8 Octave工具</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Octave是一款用于数值计算和绘图的开源软件。</p>
+<p>首先打开Mac系统的System Preferences，点开Security &amp; Privacy，选择允许在任意地方下载app。</p>
+<p>下载<a href="http://sourceforge.net/projects/octave/files/Octave%20MacOSX%20Binary/2013-12-30%20binary%20installer%20of%20Octave%203.8.0%20for%20OSX%2010.9.1%20%28beta%29/GNU_Octave_3.8.0-6.dmg/download" target="_blank" rel="noopener">Octave</a>，下载完毕后点击打开，按步骤安装</p>
+<p>安装完毕后你可以在mac电脑上看到<code>*Octave-cli*</code>。</p>
+<h3 id="使用"><a class="markdownIt-Anchor" href="#使用"></a> 使用：</h3>
+<ul>
+<li>简单运算：5+6， 5*6， 5^6</li>
+<li>逻辑运算：1 == 2  % false(百分号是注释)； 1 &amp;&amp; 0 ;1||0;xor(1, 0)</li>
+<li>赋值语句：a = 5</li>
+<li>强制转换形式：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = pi</span><br><span class="line">format long</span><br><span class="line">format short</span><br></pre></td></tr></table></figure>
+<ul>
+<li>矩阵</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A = [1 2; 3 4; 5 6]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>矢量</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A = [1 2 3]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>v = 1.0:0.2:2.0</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.00 1.20 1.40 1.60 1.80 2.00</span><br></pre></td></tr></table></figure>
+<ul>
+<li>v = 1:5</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
+<ul>
+<li>one(2, 3)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 1 1</span><br><span class="line">1 1 1</span><br></pre></td></tr></table></figure>
+<ul>
+<li>2 * one(2, 3)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 2 2</span><br><span class="line">2 2 2</span><br></pre></td></tr></table></figure>
+<ul>
+<li>randn(3, 3): 生成3 * 3 元素是高斯随机变量<br>
+举例：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w = -6 + sqrt(10) * (randn(1, 1000))</span><br></pre></td></tr></table></figure>
+<ul>
+<li>hist(w):绘制成图</li>
+<li>eye(4):获取到四行四列的单位矩阵</li>
+<li>size(A):获取矩阵A的行列；size(A,1)矩阵的行；size(A, 2)矩阵的列</li>
+<li>pwd是当前所处路径，加载本地文件使用load()；显示当前内存的变量使用who，whos更详细的内容。</li>
+<li>保存：save helo.mat A；把A保存到helo.mat的文件中。save helo.txt A -ascii</li>
+<li>A(2, 😃:第二行所有元素；A(:, 2):第二列所有元素；A([1,3], 😃:第一行第三行所有元素</li>
+<li>A(:)所有行列元素列出来</li>
+<li>​</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">												          1  2</span><br><span class="line">    1 2       11 12              1 2 11 12				  3  4		</span><br><span class="line">A = 3 4   B = 13 14  C = [A B] = 3 4 13 14  D = [A ; B] = 5  6</span><br><span class="line">    5 6       15 16              5 6 15 16                11 12</span><br><span class="line">    													  13 14</span><br><span class="line">    													  15 16</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	1 2		 1 1			5  5</span><br><span class="line">A = 3 4  C = 2 2    A * C = 11 11</span><br><span class="line">	5 6 					17 17</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	1 2		 11 12			 11 24</span><br><span class="line">A = 3 4  B = 13 14  A .* B = 39 56</span><br><span class="line">	5 6		 15 16			 75 96</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	1 2			 1  2			  1		0.5</span><br><span class="line">A = 3 4  A .^2 = 9  16   1 ./ A = 0.333 0.25</span><br><span class="line">	5 6			 25 36			  0.2   0.167</span><br></pre></td></tr></table></figure>
+<p>还有类似的运算<code>log(A)</code>, <code>exp(A)</code>, <code>abs(A)</code>, <code>A'</code>, <code>max(A)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[val, ind] = max(A); val = 6; ind = 5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = [1 , 2 , 3];  a &lt; 2 = 1 0 0; find(a &lt; 2) = 1</span><br></pre></td></tr></table></figure>
+<p>magic(3):生成一个三行三列的任何行列相加都相等的矩阵<br>
+max(rand(3),rand(3) )   %将会返回一个3<em>3的矩阵，每一个元素都是随机生成的矩阵对应的两个元素的最大值<br>
+max(A,[],1)                       %将会返回一个行矩阵，是A中每一列的最大值<br>
+max(A,[],2)                       %将会返回一个列矩阵，是A中每一行的最大值<br>
+max(A)                              %是对每一列求出最大值<br>
+max(max(A))                    %求矩阵的最大值 或是也可以先把矩阵变成列 A(😃  然后求max，max（A(😃）<br>
+sum(a)   prod(a) floor(a)  ceil(a)        %<br>
+sum(A,1)        %表示对每一行求所有元素的和<br>
+sum(A,2)        %表示对每一列求所有元素的和<br>
+sum(sum(A.<em>eye(9)))    %求出A的对角线之和<br>
+###数据可视化:<br>
+t=[0:0.01:0.98];<br>
+y1=sin(8</em>pi</em>t);<br>
+y2=cos(8<em>pi</em>t);<br>
+plot(t,y1);<br>
+hold on;<br>
+plot(t,y2,‘r’);<br>
+xlabel(‘time’);<br>
+ylabel(‘value’);<br>
+title(‘my plot’);<br>
+legend(‘sin’,‘cos’);<br>
+cd ‘D:’;print -dpng ‘myPng’;<br>
+close  %close the figure</p>
+<p>OK,就到这里。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/" data-id="cjelj06fb000589rgp116bbux" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-机器学习—7-相关数学计算" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -145,7 +263,7 @@ A^T = \begin{bmatrix} a &amp; d \\ b &amp; e \\ c &amp; f \end{bmatrix}
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/" data-id="cjedn1b5k000605rg9tos29k1" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/" data-id="cjelj06fd000689rgfkubb9gq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -203,7 +321,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjedn1b5j000505rgfku70zz5" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjelj06f9000489rghaxw7v72" class="article-share-link">Share</a>
       
       
     </footer>
@@ -259,7 +377,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cjedn1b5h000405rg5o404a2g" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cjelj06fe000789rg9iecvbrj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -306,7 +424,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cjedn1b5g000305rg30yc9p65" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cjelj06f8000389rgtlh6j3r4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -385,7 +503,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/07/机器学习—3-测验/" data-id="cjedn1b5e000205rgcoh2b3qy" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/07/机器学习—3-测验/" data-id="cjelj06f4000189rghlhpcs5r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -445,7 +563,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/04/机器学习—2-监督学习和非监督学习/" data-id="cjedn1b5c000105rgrfzjkm8n" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/04/机器学习—2-监督学习和非监督学习/" data-id="cjelj06f7000289rgryfqp3kc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -507,7 +625,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/机器学习—1-什么是机器学习/" data-id="cjedn1b57000005rgndydf732" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/03/机器学习—1-什么是机器学习/" data-id="cjelj06f0000089rgt3izifdr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -533,7 +651,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -543,9 +661,13 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/03/08/机器学习—8-Octave工具/">机器学习—8 Octave工具</a>
+          </li>
         
           <li>
             <a href="/2018/03/04/机器学习—7-相关数学计算/">机器学习—7 相关数学计算</a>
@@ -561,10 +683,6 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
         
           <li>
             <a href="/2018/02/11/机器学习—4-监督学习模型详解/">机器学习—4 监督学习模型详解</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/07/机器学习—3-测验/">机器学习一3 测验</a>
           </li>
         
       </ul>
