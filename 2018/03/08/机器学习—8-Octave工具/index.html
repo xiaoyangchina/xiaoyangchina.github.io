@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/index.html">
 <meta property="og:site_name" content="XiaoYang的博客">
 <meta property="og:description" content="Octave是一款用于数值计算和绘图的开源软件。 首先打开Mac系统的System Preferences，点开Security &amp;amp; Privacy，选择允许在任意地方下载app。 下载Octave，下载完毕后点击打开，按步骤安装 安装完毕后你可以在mac电脑上看到*Octave-cli*。  使用：  简单运算：5+6， 5*6， 5^6 逻辑运算：1 == 2  % false(百分号">
-<meta property="og:updated_time" content="2018-03-10T15:29:09.239Z">
+<meta property="og:updated_time" content="2018-03-12T07:52:18.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习—8 Octave工具">
 <meta name="twitter:description" content="Octave是一款用于数值计算和绘图的开源软件。 首先打开Mac系统的System Preferences，点开Security &amp;amp; Privacy，选择允许在任意地方下载app。 下载Octave，下载完毕后点击打开，按步骤安装 安装完毕后你可以在mac电脑上看到*Octave-cli*。  使用：  简单运算：5+6， 5*6， 5^6 逻辑运算：1 == 2  % false(百分号">
@@ -59,7 +59,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -171,12 +171,14 @@ title(‘my plot’);<br>
 legend(‘sin’,‘cos’);<br>
 cd ‘D:’;print -dpng ‘myPng’;<br>
 close  %close the figure</p>
+<h3 id="for-while-if-statements-and-functions"><a class="markdownIt-Anchor" href="#for-while-if-statements-and-functions"></a> for, while, if statements, and functions</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">v = zeros(10, 1);</span><br><span class="line">for i=1:10</span><br><span class="line">	v(i) = 2^i;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i = 1;</span><br><span class="line">while i &lt;= 5</span><br><span class="line">	v(i) = 100;</span><br><span class="line">	i = i+1;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">i = 1;</span><br><span class="line">while true</span><br><span class="line">	v(i) = 999;</span><br><span class="line">	i = i + 1;</span><br><span class="line">	if i == 6</span><br><span class="line">		break;</span><br><span class="line">	end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">if v[1] == 1</span><br><span class="line">	disp(&apos;The value is one&apos;)</span><br><span class="line">elseif v[1] == 2</span><br><span class="line">	disp(&apos;The value is two&apos;)</span><br><span class="line">else</span><br><span class="line">	disp(&apos;The value is other&apos;)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">%Function</span><br><span class="line">function r = squareThisNumber(x)</span><br><span class="line">	r = x * x</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">function [a, b] = squareThisNumber(x)</span><br><span class="line">	a = x * x</span><br><span class="line">	b = x * x * x</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 <p>OK,就到这里。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/" data-id="cjelj06fb000589rgp116bbux" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/" data-id="cjenxxstu00045srguppvwz3y" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -187,7 +189,7 @@ close  %close the figure</p>
   
   
     <a href="/2018/03/04/机器学习—7-相关数学计算/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">机器学习—7 相关数学计算</div>
     </a>
   
@@ -210,7 +212,7 @@ close  %close the figure</p>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -220,7 +222,7 @@ close  %close the figure</p>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
