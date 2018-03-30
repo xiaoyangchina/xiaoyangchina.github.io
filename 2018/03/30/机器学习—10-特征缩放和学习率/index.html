@@ -7,16 +7,16 @@
   
   <title>机器学习—10 特征缩放和学习率 | XiaoYang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="特征缩放和学习率 在梯度下降的算法中，我们有一些方法可以加速梯度下降，接下来我们就介绍下，特征缩放和学习率。  特征缩放 我们先回忆下公式： \begin{align*}&amp; \text{repeat until convergence:} \; \lbrace \newline \; &amp; \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_">
+  <meta name="description" content="特征缩放和学习率 在梯度下降的算法中，我们有一些方法可以加速梯度下降，接下来我们就介绍下，特征缩放和学习率。  特征缩放 我们先回忆下公式： \begin{align*} \text{repeat until convergence:} \\ \lbrace &amp; \\ \theta_0 := &amp; \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习—10 特征缩放和学习率">
 <meta property="og:url" content="http://yoursite.com/2018/03/30/机器学习—10-特征缩放和学习率/index.html">
 <meta property="og:site_name" content="XiaoYang的博客">
-<meta property="og:description" content="特征缩放和学习率 在梯度下降的算法中，我们有一些方法可以加速梯度下降，接下来我们就介绍下，特征缩放和学习率。  特征缩放 我们先回忆下公式： \begin{align*}&amp; \text{repeat until convergence:} \; \lbrace \newline \; &amp; \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_">
-<meta property="og:updated_time" content="2018-03-30T02:22:54.560Z">
+<meta property="og:description" content="特征缩放和学习率 在梯度下降的算法中，我们有一些方法可以加速梯度下降，接下来我们就介绍下，特征缩放和学习率。  特征缩放 我们先回忆下公式： \begin{align*} \text{repeat until convergence:} \\ \lbrace &amp; \\ \theta_0 := &amp; \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m">
+<meta property="og:updated_time" content="2018-03-30T02:26:20.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习—10 特征缩放和学习率">
-<meta name="twitter:description" content="特征缩放和学习率 在梯度下降的算法中，我们有一些方法可以加速梯度下降，接下来我们就介绍下，特征缩放和学习率。  特征缩放 我们先回忆下公式： \begin{align*}&amp; \text{repeat until convergence:} \; \lbrace \newline \; &amp; \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_">
+<meta name="twitter:description" content="特征缩放和学习率 在梯度下降的算法中，我们有一些方法可以加速梯度下降，接下来我们就介绍下，特征缩放和学习率。  特征缩放 我们先回忆下公式： \begin{align*} \text{repeat until convergence:} \\ \lbrace &amp; \\ \theta_0 := &amp; \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m">
   
     <link rel="alternate" href="/atom.xml" title="XiaoYang的博客" type="application/atom+xml">
   
@@ -94,7 +94,7 @@
 <p>在梯度下降的算法中，我们有一些方法可以加速梯度下降，接下来我们就介绍下，特征缩放和学习率。</p>
 <h3 id="特征缩放"><a class="markdownIt-Anchor" href="#特征缩放"></a> 特征缩放</h3>
 <p>我们先回忆下公式：</p>
-\begin{align*}& \text{repeat until convergence:} \; \lbrace \newline \; & \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)} \; & \text{for j := 0...n}\newline \rbrace\end{align*}
+\begin{align*} \text{repeat until convergence:} \\ \lbrace & \\ \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \\ \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \\ \rbrace& \end{align*}
 
 <p>对于θ，在小范围内下降比较快，在大范围内下降比较慢。所以如果这些变量不均匀时算法会比较低效。<br>
 通过上面的原因，我们可以认为的控制参数范围，从而避免比较低效的状况。<br>
@@ -131,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/30/机器学习—10-特征缩放和学习率/" data-id="cjfdbpte300007frgspzgbt4q" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/30/机器学习—10-特征缩放和学习率/" data-id="cjfdbu3f100017srg5e4f267p" class="article-share-link">Teilen</a>
       
       
     </footer>
