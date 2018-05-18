@@ -7,16 +7,16 @@
   
   <title>机器学习—8 Octave工具 | XiaoYang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Octave是一款用于数值计算和绘图的开源软件。 首先打开Mac系统的System Preferences，点开Security &amp;amp; Privacy，选择允许在任意地方下载app。 下载Octave，下载完毕后点击打开，按步骤安装 安装完毕后你可以在mac电脑上看到*Octave-cli*。 使用： 简单运算：5+6， 5*6， 5^6 逻辑运算：1 == 2  % false(百分号是注">
+  <meta name="description" content="Octave是一款用于数值计算和绘图的开源软件。 首先打开Mac系统的System Preferences，点开Security &amp;amp; Privacy，选择允许在任意地方下载app。 下载Octave，下载完毕后点击打开，按步骤安装 安装完毕后你可以在mac电脑上看到*Octave-cli*。  使用：  简单运算：5+6， 5*6， 5^6 逻辑运算：1 == 2  % false(百分号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习—8 Octave工具">
 <meta property="og:url" content="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/index.html">
 <meta property="og:site_name" content="XiaoYang的博客">
-<meta property="og:description" content="Octave是一款用于数值计算和绘图的开源软件。 首先打开Mac系统的System Preferences，点开Security &amp;amp; Privacy，选择允许在任意地方下载app。 下载Octave，下载完毕后点击打开，按步骤安装 安装完毕后你可以在mac电脑上看到*Octave-cli*。 使用： 简单运算：5+6， 5*6， 5^6 逻辑运算：1 == 2  % false(百分号是注">
+<meta property="og:description" content="Octave是一款用于数值计算和绘图的开源软件。 首先打开Mac系统的System Preferences，点开Security &amp;amp; Privacy，选择允许在任意地方下载app。 下载Octave，下载完毕后点击打开，按步骤安装 安装完毕后你可以在mac电脑上看到*Octave-cli*。  使用：  简单运算：5+6， 5*6， 5^6 逻辑运算：1 == 2  % false(百分号">
 <meta property="og:updated_time" content="2018-03-12T07:52:18.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习—8 Octave工具">
-<meta name="twitter:description" content="Octave是一款用于数值计算和绘图的开源软件。 首先打开Mac系统的System Preferences，点开Security &amp;amp; Privacy，选择允许在任意地方下载app。 下载Octave，下载完毕后点击打开，按步骤安装 安装完毕后你可以在mac电脑上看到*Octave-cli*。 使用： 简单运算：5+6， 5*6， 5^6 逻辑运算：1 == 2  % false(百分号是注">
+<meta name="twitter:description" content="Octave是一款用于数值计算和绘图的开源软件。 首先打开Mac系统的System Preferences，点开Security &amp;amp; Privacy，选择允许在任意地方下载app。 下载Octave，下载完毕后点击打开，按步骤安装 安装完毕后你可以在mac电脑上看到*Octave-cli*。  使用：  简单运算：5+6， 5*6， 5^6 逻辑运算：1 == 2  % false(百分号">
   
     <link rel="alternate" href="/atom.xml" title="XiaoYang的博客" type="application/atom+xml">
   
@@ -59,7 +59,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -94,59 +94,91 @@
 <p>首先打开Mac系统的System Preferences，点开Security &amp; Privacy，选择允许在任意地方下载app。</p>
 <p>下载<a href="http://sourceforge.net/projects/octave/files/Octave%20MacOSX%20Binary/2013-12-30%20binary%20installer%20of%20Octave%203.8.0%20for%20OSX%2010.9.1%20%28beta%29/GNU_Octave_3.8.0-6.dmg/download" target="_blank" rel="noopener">Octave</a>，下载完毕后点击打开，按步骤安装</p>
 <p>安装完毕后你可以在mac电脑上看到<code>*Octave-cli*</code>。</p>
-<h3 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h3><ul>
+<h3 id="使用"><a class="markdownIt-Anchor" href="#使用"></a> 使用：</h3>
+<ul>
 <li>简单运算：5+6， 5*6， 5^6</li>
 <li>逻辑运算：1 == 2  % false(百分号是注释)； 1 &amp;&amp; 0 ;1||0;xor(1, 0)</li>
 <li>赋值语句：a = 5</li>
-<li><p>强制转换形式：</p>
+<li>强制转换形式：</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = pi</span><br><span class="line">format long</span><br><span class="line">format short</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>矩阵</p>
+<ul>
+<li>矩阵</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A = [1 2; 3 4; 5 6]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>矢量</p>
+<ul>
+<li>矢量</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A = [1 2 3]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>v = 1.0:0.2:2.0</p>
+<ul>
+<li>v = 1.0:0.2:2.0</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.00 1.20 1.40 1.60 1.80 2.00</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>v = 1:5</p>
+<ul>
+<li>v = 1:5</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>one(2, 3)</p>
+<ul>
+<li>one(2, 3)</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 1 1</span><br><span class="line">1 1 1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2 * one(2, 3)</p>
+<ul>
+<li>2 * one(2, 3)</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 2 2</span><br><span class="line">2 2 2</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>randn(3, 3): 生成3 * 3 元素是高斯随机变量<br>举例：</p>
+<ul>
+<li>randn(3, 3): 生成3 * 3 元素是高斯随机变量<br>
+举例：</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w = -6 + sqrt(10) * (randn(1, 1000))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>hist(w):绘制成图</p>
-</li>
+<ul>
+<li>hist(w):绘制成图</li>
 <li>eye(4):获取到四行四列的单位矩阵</li>
 <li>size(A):获取矩阵A的行列；size(A,1)矩阵的行；size(A, 2)矩阵的列</li>
 <li>pwd是当前所处路径，加载本地文件使用load()；显示当前内存的变量使用who，whos更详细的内容。</li>
 <li>保存：save helo.mat A；把A保存到helo.mat的文件中。save helo.txt A -ascii</li>
-<li>A(2, :):第二行所有元素；A(:, 2):第二列所有元素；A([1,3], :):第一行第三行所有元素</li>
+<li>A(2, 😃:第二行所有元素；A(:, 2):第二列所有元素；A([1,3], 😃:第一行第三行所有元素</li>
 <li>A(:)所有行列元素列出来</li>
-<li>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">												          1  2</span><br><span class="line">    1 2       11 12              1 2 11 12				  3  4		</span><br><span class="line">A = 3 4   B = 13 14  C = [A B] = 3 4 13 14  D = [A ; B] = 5  6</span><br><span class="line">    5 6       15 16              5 6 15 16                11 12</span><br><span class="line">    													  13 14</span><br><span class="line">    													  15 16</span><br></pre></td></tr></table></figure>
-</li>
+<li>​</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">												          1  2</span><br><span class="line">    1 2       11 12              1 2 11 12				  3  4		</span><br><span class="line">A = 3 4   B = 13 14  C = [A B] = 3 4 13 14  D = [A ; B] = 5  6</span><br><span class="line">    5 6       15 16              5 6 15 16                11 12</span><br><span class="line">    													  13 14</span><br><span class="line">    													  15 16</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	1 2		 1 1			5  5</span><br><span class="line">A = 3 4  C = 2 2    A * C = 11 11</span><br><span class="line">	5 6 					17 17</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	1 2		 11 12			 11 24</span><br><span class="line">A = 3 4  B = 13 14  A .* B = 39 56</span><br><span class="line">	5 6		 15 16			 75 96</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	1 2			 1  2			  1		0.5</span><br><span class="line">A = 3 4  A .^2 = 9  16   1 ./ A = 0.333 0.25</span><br><span class="line">	5 6			 25 36			  0.2   0.167</span><br></pre></td></tr></table></figure>
-<p>还有类似的运算<code>log(A)</code>, <code>exp(A)</code>, <code>abs(A)</code>, <code>A&#39;</code>, <code>max(A)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[val, ind] = max(A); val = 6; ind = 5</span><br></pre></td></tr></table></figure></p>
+<p>还有类似的运算<code>log(A)</code>, <code>exp(A)</code>, <code>abs(A)</code>, <code>A'</code>, <code>max(A)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[val, ind] = max(A); val = 6; ind = 5</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = [1 , 2 , 3];  a &lt; 2 = 1 0 0; find(a &lt; 2) = 1</span><br></pre></td></tr></table></figure>
-<p>magic(3):生成一个三行三列的任何行列相加都相等的矩阵<br>max(rand(3),rand(3) )   %将会返回一个3<em>3的矩阵，每一个元素都是随机生成的矩阵对应的两个元素的最大值<br>max(A,[],1)                       %将会返回一个行矩阵，是A中每一列的最大值<br>max(A,[],2)                       %将会返回一个列矩阵，是A中每一行的最大值<br>max(A)                              %是对每一列求出最大值<br>max(max(A))                    %求矩阵的最大值 或是也可以先把矩阵变成列 A(:)  然后求max，max（A(:)）<br>sum(a)   prod(a) floor(a)  ceil(a)        %<br>sum(A,1)        %表示对每一行求所有元素的和<br>sum(A,2)        %表示对每一列求所有元素的和<br>sum(sum(A.</em>eye(9)))    %求出A的对角线之和</p>
-<h3 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化:"></a>数据可视化:</h3><p>t=[0:0.01:0.98];<br>y1=sin(8<em>pi</em>t);<br>y2=cos(8<em>pi</em>t);<br>plot(t,y1);<br>hold on;<br>plot(t,y2,’r’);<br>xlabel(‘time’);<br>ylabel(‘value’);<br>title(‘my plot’);<br>legend(‘sin’,’cos’);<br>cd ‘D:\’;print -dpng ‘myPng’;<br>close  %close the figure</p>
-<h3 id="for-while-if-statements-and-functions"><a href="#for-while-if-statements-and-functions" class="headerlink" title="for, while, if statements, and functions"></a>for, while, if statements, and functions</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">v = zeros(10, 1);</span><br><span class="line">for i=1:10</span><br><span class="line">	v(i) = 2^i;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i = 1;</span><br><span class="line">while i &lt;= 5</span><br><span class="line">	v(i) = 100;</span><br><span class="line">	i = i+1;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">i = 1;</span><br><span class="line">while true</span><br><span class="line">	v(i) = 999;</span><br><span class="line">	i = i + 1;</span><br><span class="line">	if i == 6</span><br><span class="line">		break;</span><br><span class="line">	end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">if v[1] == 1</span><br><span class="line">	disp(&apos;The value is one&apos;)</span><br><span class="line">elseif v[1] == 2</span><br><span class="line">	disp(&apos;The value is two&apos;)</span><br><span class="line">else</span><br><span class="line">	disp(&apos;The value is other&apos;)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">%Function</span><br><span class="line">function r = squareThisNumber(x)</span><br><span class="line">	r = x * x</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">function [a, b] = squareThisNumber(x)</span><br><span class="line">	a = x * x</span><br><span class="line">	b = x * x * x</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>magic(3):生成一个三行三列的任何行列相加都相等的矩阵<br>
+max(rand(3),rand(3) )   %将会返回一个3<em>3的矩阵，每一个元素都是随机生成的矩阵对应的两个元素的最大值<br>
+max(A,[],1)                       %将会返回一个行矩阵，是A中每一列的最大值<br>
+max(A,[],2)                       %将会返回一个列矩阵，是A中每一行的最大值<br>
+max(A)                              %是对每一列求出最大值<br>
+max(max(A))                    %求矩阵的最大值 或是也可以先把矩阵变成列 A(😃  然后求max，max（A(😃）<br>
+sum(a)   prod(a) floor(a)  ceil(a)        %<br>
+sum(A,1)        %表示对每一行求所有元素的和<br>
+sum(A,2)        %表示对每一列求所有元素的和<br>
+sum(sum(A.<em>eye(9)))    %求出A的对角线之和<br>
+###数据可视化:<br>
+t=[0:0.01:0.98];<br>
+y1=sin(8</em>pi</em>t);<br>
+y2=cos(8<em>pi</em>t);<br>
+plot(t,y1);<br>
+hold on;<br>
+plot(t,y2,‘r’);<br>
+xlabel(‘time’);<br>
+ylabel(‘value’);<br>
+title(‘my plot’);<br>
+legend(‘sin’,‘cos’);<br>
+cd ‘D:’;print -dpng ‘myPng’;<br>
+close  %close the figure</p>
+<h3 id="for-while-if-statements-and-functions"><a class="markdownIt-Anchor" href="#for-while-if-statements-and-functions"></a> for, while, if statements, and functions</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">v = zeros(10, 1);</span><br><span class="line">for i=1:10</span><br><span class="line">	v(i) = 2^i;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i = 1;</span><br><span class="line">while i &lt;= 5</span><br><span class="line">	v(i) = 100;</span><br><span class="line">	i = i+1;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">i = 1;</span><br><span class="line">while true</span><br><span class="line">	v(i) = 999;</span><br><span class="line">	i = i + 1;</span><br><span class="line">	if i == 6</span><br><span class="line">		break;</span><br><span class="line">	end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">if v[1] == 1</span><br><span class="line">	disp(&apos;The value is one&apos;)</span><br><span class="line">elseif v[1] == 2</span><br><span class="line">	disp(&apos;The value is two&apos;)</span><br><span class="line">else</span><br><span class="line">	disp(&apos;The value is other&apos;)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">%Function</span><br><span class="line">function r = squareThisNumber(x)</span><br><span class="line">	r = x * x</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">function [a, b] = squareThisNumber(x)</span><br><span class="line">	a = x * x</span><br><span class="line">	b = x * x * x</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 <p>OK,就到这里。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/" data-id="cjhbt0qhn00094xrg8uq8h4nu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/" data-id="cjhbt29o5000a5vrgzvl6sm49" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -156,7 +188,7 @@
 <nav id="article-nav">
   
     <a href="/2018/03/30/机器学习—9-多参的梯度下降/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           机器学习—9 多参的梯度下降
@@ -166,7 +198,7 @@
   
   
     <a href="/2018/03/04/机器学习—7-相关数学计算/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">机器学习—7 相关数学计算</div>
     </a>
   
@@ -189,7 +221,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -199,12 +231,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2018/05/18/机器学习-10-通过MNIST了解卷积神经网络/">机器学习-10-通过MNIST了解卷积神经网络</a>
+            <a href="/2018/05/18/机器学习-11-通过MNIST了解卷积神经网络/">机器学习-11-通过MNIST了解卷积神经网络</a>
           </li>
         
           <li>
