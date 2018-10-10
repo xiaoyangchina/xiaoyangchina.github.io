@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>算法 | XiaoYang的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="冒泡排序 时间复杂度：最好O(n)最坏O(n2)平均(n2) 空间复杂度：O(1) 12345678910111213141516171819public static void sort() &amp;#123;       int[] a = &amp;#123;3, 2, 5, 7, 9 , 8, 6, 1&amp;#125;;       for (int i = 0; i &amp;lt; a.length; i++">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法">
+<meta property="og:url" content="http://yoursite.com/2018/10/09/算法/index.html">
+<meta property="og:site_name" content="XiaoYang的博客">
+<meta property="og:description" content="冒泡排序 时间复杂度：最好O(n)最坏O(n2)平均(n2) 空间复杂度：O(1) 12345678910111213141516171819public static void sort() &amp;#123;       int[] a = &amp;#123;3, 2, 5, 7, 9 , 8, 6, 1&amp;#125;;       for (int i = 0; i &amp;lt; a.length; i++">
+<meta property="og:updated_time" content="2018-10-10T09:14:39.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法">
+<meta name="twitter:description" content="冒泡排序 时间复杂度：最好O(n)最坏O(n2)平均(n2) 空间复杂度：O(1) 12345678910111213141516171819public static void sort() &amp;#123;       int[] a = &amp;#123;3, 2, 5, 7, 9 , 8, 6, 1&amp;#125;;       for (int i = 0; i &amp;lt; a.length; i++">
+  
+    <link rel="alternate" href="/atom.xml" title="XiaoYang的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XiaoYang的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">机器学习和Android</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/09/算法/" class="article-date">
+  <time datetime="2018-10-09T02:39:53.000Z" itemprop="datePublished">2018-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      算法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="冒泡排序"><a class="markdownIt-Anchor" href="#冒泡排序"></a> 冒泡排序</h2>
+<p>时间复杂度：最好O(n)最坏O(n<sup>2)平均(n</sup>2)<br>
+空间复杂度：O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static void sort() &#123;</span><br><span class="line">       int[] a = &#123;3, 2, 5, 7, 9 , 8, 6, 1&#125;;</span><br><span class="line">       for (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">           boolean exchange = false;</span><br><span class="line">           for (int j = 0; j &lt; a.length - i - 1; j ++) &#123;</span><br><span class="line">               if (a[j] &gt; a[j+1]) &#123;</span><br><span class="line">                   int b = a[j];</span><br><span class="line">                   a[j] = a[j+1];</span><br><span class="line">                   a[j+1] = b;</span><br><span class="line">                   exchange = true;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           if (!exchange) &#123;</span><br><span class="line">               break;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       for (int x : a)</span><br><span class="line">           System.out.print(x);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="选择排序"><a class="markdownIt-Anchor" href="#选择排序"></a> 选择排序</h2>
+<p>时间复杂度：最好O(n)最坏O(n<sup>2)平均(n</sup>2)<br>
+空间复杂度：O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public static void sort() &#123;</span><br><span class="line">    int[] a = &#123;3, 2, 5, 7, 9 , 8, 6, 1&#125;;</span><br><span class="line">    for(int i = 0; i &lt; (a.length-1); i++) &#123;</span><br><span class="line">        int minIndex = i;</span><br><span class="line">        for (int j = i+1; j &lt; a.length; j++) &#123;</span><br><span class="line">            if(a[minIndex] &gt; a[j]) &#123;</span><br><span class="line">                minIndex = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(minIndex != i) &#123;</span><br><span class="line">            int b = a[i];</span><br><span class="line">            a[i] = a[minIndex];</span><br><span class="line">            a[minIndex] = b;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int x : a)</span><br><span class="line">        System.out.print(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="插入排序"><a class="markdownIt-Anchor" href="#插入排序"></a> 插入排序</h2>
+<p>时间复杂度：最好O(n)最坏O(n<sup>2)平均(n</sup>2)<br>
+空间复杂度：O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void sort() &#123;</span><br><span class="line">        int[] a = &#123;3, 2, 5, 7, 9 , 8, 6, 1&#125;;</span><br><span class="line">        for (int i = 1; i &lt; a.length; i++) &#123;</span><br><span class="line">            int b = a[i];</span><br><span class="line">            int j = i-1;</span><br><span class="line">            while (j &gt;= 0 &amp;&amp; b &lt; a[j]) &#123;</span><br><span class="line">                a[j+1] = a[j];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            a[j+1] = b;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int x : a)</span><br><span class="line">            System.out.print(x);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="归并排序"><a class="markdownIt-Anchor" href="#归并排序"></a> 归并排序</h2>
+<p>时间复杂度：O(nlog_2n)<br>
+空间复杂度：O(n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">public static void merge(int[] a, int[] b, int low, int high, int mid) &#123;</span><br><span class="line">        int i = low;</span><br><span class="line">        int j = mid + 1;</span><br><span class="line">        int k = i;</span><br><span class="line">        for (; i &lt;= mid &amp;&amp; j &lt;= high; k++) &#123;</span><br><span class="line">            if (a[i] &lt;= a[j]) &#123;</span><br><span class="line">                b[k] = a[i];</span><br><span class="line">                i++;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                b[k] = a[j];</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        while (i &lt;= mid) &#123;</span><br><span class="line">            b[k] = a[i];</span><br><span class="line">            k++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        while (j &lt;= high) &#123;</span><br><span class="line">            b[k] = a[j];</span><br><span class="line">            k++;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int n = low; n &lt;= high; n++) &#123;</span><br><span class="line">            a[n] = b[n];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void sort(int[] a, int[] b, int low, int high) &#123;</span><br><span class="line">        if (low &lt; high) &#123;</span><br><span class="line">            int mid = (low + high) / 2;</span><br><span class="line">            sort(a, b, low, mid);</span><br><span class="line">            sort(a, b, mid + 1, high);</span><br><span class="line">            merge(a, b, low, high, mid);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="快速排序"><a class="markdownIt-Anchor" href="#快速排序"></a> 快速排序</h2>
+<p>时间复杂度：平均O(nlog_2n)； 最坏O(n^2)；最好(nlog_2n)<br>
+空间复杂度：O(nlog_2n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public static int partiton(int[] a, int low, int high) &#123;</span><br><span class="line">       int k = a[low];</span><br><span class="line">       while (high &gt; low) &#123;</span><br><span class="line">           while (high &gt; low &amp;&amp; a[high] &gt;= k) &#123;</span><br><span class="line">               high--;</span><br><span class="line">           &#125;</span><br><span class="line">           a[low] = a[high];</span><br><span class="line">           while (high &gt; low &amp;&amp; a[low] &lt;= k) &#123;</span><br><span class="line">               low++;</span><br><span class="line">           &#125;</span><br><span class="line">           a[high] = a[low];</span><br><span class="line">       &#125;</span><br><span class="line">       a[high] = k;</span><br><span class="line">       return high;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void qqSort(int[] a, int low, int high) &#123;</span><br><span class="line">       if (high &gt; low) &#123;</span><br><span class="line">           int index = partiton(a, low, high);</span><br><span class="line">           qqSort(a, low, index);</span><br><span class="line">           qqSort(a, index+1, high);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/09/算法/" data-id="cjn2xugrm000a5prggomxoqw8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/10/03/数据结构/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/09/算法/">算法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/03/数据结构/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/18/机器学习-11-通过MNIST了解卷积神经网络/">机器学习-11-通过MNIST了解卷积神经网络</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/20/入门实践-鸢尾花分类问题/">入门实践-鸢尾花分类问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/30/机器学习—10-特征缩放和学习率/">机器学习—10 特征缩放和学习率</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 XiaoYang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

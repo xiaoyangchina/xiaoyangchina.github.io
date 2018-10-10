@@ -55,7 +55,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -65,6 +65,152 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/09/算法/" class="article-date">
+  <time datetime="2018-10-09T02:39:53.000Z" itemprop="datePublished">2018-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/09/算法/">算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="冒泡排序"><a class="markdownIt-Anchor" href="#冒泡排序"></a> 冒泡排序</h2>
+<p>时间复杂度：最好O(n)最坏O(n<sup>2)平均(n</sup>2)<br>
+空间复杂度：O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static void sort() &#123;</span><br><span class="line">       int[] a = &#123;3, 2, 5, 7, 9 , 8, 6, 1&#125;;</span><br><span class="line">       for (int i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">           boolean exchange = false;</span><br><span class="line">           for (int j = 0; j &lt; a.length - i - 1; j ++) &#123;</span><br><span class="line">               if (a[j] &gt; a[j+1]) &#123;</span><br><span class="line">                   int b = a[j];</span><br><span class="line">                   a[j] = a[j+1];</span><br><span class="line">                   a[j+1] = b;</span><br><span class="line">                   exchange = true;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           if (!exchange) &#123;</span><br><span class="line">               break;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       for (int x : a)</span><br><span class="line">           System.out.print(x);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="选择排序"><a class="markdownIt-Anchor" href="#选择排序"></a> 选择排序</h2>
+<p>时间复杂度：最好O(n)最坏O(n<sup>2)平均(n</sup>2)<br>
+空间复杂度：O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public static void sort() &#123;</span><br><span class="line">    int[] a = &#123;3, 2, 5, 7, 9 , 8, 6, 1&#125;;</span><br><span class="line">    for(int i = 0; i &lt; (a.length-1); i++) &#123;</span><br><span class="line">        int minIndex = i;</span><br><span class="line">        for (int j = i+1; j &lt; a.length; j++) &#123;</span><br><span class="line">            if(a[minIndex] &gt; a[j]) &#123;</span><br><span class="line">                minIndex = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(minIndex != i) &#123;</span><br><span class="line">            int b = a[i];</span><br><span class="line">            a[i] = a[minIndex];</span><br><span class="line">            a[minIndex] = b;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int x : a)</span><br><span class="line">        System.out.print(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="插入排序"><a class="markdownIt-Anchor" href="#插入排序"></a> 插入排序</h2>
+<p>时间复杂度：最好O(n)最坏O(n<sup>2)平均(n</sup>2)<br>
+空间复杂度：O(1)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void sort() &#123;</span><br><span class="line">        int[] a = &#123;3, 2, 5, 7, 9 , 8, 6, 1&#125;;</span><br><span class="line">        for (int i = 1; i &lt; a.length; i++) &#123;</span><br><span class="line">            int b = a[i];</span><br><span class="line">            int j = i-1;</span><br><span class="line">            while (j &gt;= 0 &amp;&amp; b &lt; a[j]) &#123;</span><br><span class="line">                a[j+1] = a[j];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            a[j+1] = b;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int x : a)</span><br><span class="line">            System.out.print(x);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="归并排序"><a class="markdownIt-Anchor" href="#归并排序"></a> 归并排序</h2>
+<p>时间复杂度：O(nlog_2n)<br>
+空间复杂度：O(n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">public static void merge(int[] a, int[] b, int low, int high, int mid) &#123;</span><br><span class="line">        int i = low;</span><br><span class="line">        int j = mid + 1;</span><br><span class="line">        int k = i;</span><br><span class="line">        for (; i &lt;= mid &amp;&amp; j &lt;= high; k++) &#123;</span><br><span class="line">            if (a[i] &lt;= a[j]) &#123;</span><br><span class="line">                b[k] = a[i];</span><br><span class="line">                i++;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                b[k] = a[j];</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        while (i &lt;= mid) &#123;</span><br><span class="line">            b[k] = a[i];</span><br><span class="line">            k++;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        while (j &lt;= high) &#123;</span><br><span class="line">            b[k] = a[j];</span><br><span class="line">            k++;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int n = low; n &lt;= high; n++) &#123;</span><br><span class="line">            a[n] = b[n];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void sort(int[] a, int[] b, int low, int high) &#123;</span><br><span class="line">        if (low &lt; high) &#123;</span><br><span class="line">            int mid = (low + high) / 2;</span><br><span class="line">            sort(a, b, low, mid);</span><br><span class="line">            sort(a, b, mid + 1, high);</span><br><span class="line">            merge(a, b, low, high, mid);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="快速排序"><a class="markdownIt-Anchor" href="#快速排序"></a> 快速排序</h2>
+<p>时间复杂度：平均O(nlog_2n)； 最坏O(n^2)；最好(nlog_2n)<br>
+空间复杂度：O(nlog_2n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public static int partiton(int[] a, int low, int high) &#123;</span><br><span class="line">       int k = a[low];</span><br><span class="line">       while (high &gt; low) &#123;</span><br><span class="line">           while (high &gt; low &amp;&amp; a[high] &gt;= k) &#123;</span><br><span class="line">               high--;</span><br><span class="line">           &#125;</span><br><span class="line">           a[low] = a[high];</span><br><span class="line">           while (high &gt; low &amp;&amp; a[low] &lt;= k) &#123;</span><br><span class="line">               low++;</span><br><span class="line">           &#125;</span><br><span class="line">           a[high] = a[low];</span><br><span class="line">       &#125;</span><br><span class="line">       a[high] = k;</span><br><span class="line">       return high;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void qqSort(int[] a, int low, int high) &#123;</span><br><span class="line">       if (high &gt; low) &#123;</span><br><span class="line">           int index = partiton(a, low, high);</span><br><span class="line">           qqSort(a, low, index);</span><br><span class="line">           qqSort(a, index+1, high);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/09/算法/" data-id="cjn2xugrm000a5prggomxoqw8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-数据结构" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/03/数据结构/" class="article-date">
+  <time datetime="2018-10-03T04:15:33.942Z" itemprop="datePublished">2018-10-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据结构"><a class="markdownIt-Anchor" href="#数据结构"></a> 数据结构</h1>
+<h2 id="线性表"><a class="markdownIt-Anchor" href="#线性表"></a> 线性表</h2>
+<h3 id="顺序存储"><a class="markdownIt-Anchor" href="#顺序存储"></a> 顺序存储</h3>
+<p>地址连续、读取随机、增删移位；插入移位概率(n/2)；删除移位(n-1/2)</p>
+<h3 id="链式存储"><a class="markdownIt-Anchor" href="#链式存储"></a> 链式存储</h3>
+<p>地址随机、读取连续；<br>
+a) 插入操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s-&gt;next = p-&gt;next</span><br><span class="line">p-&gt;next = s</span><br></pre></td></tr></table></figure>
+<p>b) 删除操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">q = p-&gt;next</span><br><span class="line">p-&gt;next = p-&gt;next-&gt;next</span><br><span class="line">free(q)</span><br></pre></td></tr></table></figure>
+<h2 id="栈"><a class="markdownIt-Anchor" href="#栈"></a> 栈</h2>
+<h3 id="特性"><a class="markdownIt-Anchor" href="#特性"></a> 特性</h3>
+<p>先进后出</p>
+<h3 id="存储"><a class="markdownIt-Anchor" href="#存储"></a> 存储</h3>
+<p>顺序存储和链式存储</p>
+<h2 id="队列"><a class="markdownIt-Anchor" href="#队列"></a> 队列</h2>
+<h3 id="特性-2"><a class="markdownIt-Anchor" href="#特性-2"></a> 特性</h3>
+<p>先进先出</p>
+<h3 id="存储-2"><a class="markdownIt-Anchor" href="#存储-2"></a> 存储</h3>
+<h4 id="顺序存储-2"><a class="markdownIt-Anchor" href="#顺序存储-2"></a> 顺序存储</h4>
+<p>入队列移动队头、出队列移动队列尾；代表环形队列</p>
+<h4 id="链式存储-2"><a class="markdownIt-Anchor" href="#链式存储-2"></a> 链式存储</h4>
+<p>头指针和尾指针值相同队列尾空。</p>
+<h2 id="串"><a class="markdownIt-Anchor" href="#串"></a> 串</h2>
+<h3 id="存储-3"><a class="markdownIt-Anchor" href="#存储-3"></a> 存储</h3>
+<p>顺序存储、链式存储</p>
+<h2 id="数组"><a class="markdownIt-Anchor" href="#数组"></a> 数组</h2>
+<h3 id="存储-4"><a class="markdownIt-Anchor" href="#存储-4"></a> 存储</h3>
+<p>定长线性表、顺序存储</p>
+<h2 id="矩阵和广义表"><a class="markdownIt-Anchor" href="#矩阵和广义表"></a> 矩阵和广义表</h2>
+<h2 id="树"><a class="markdownIt-Anchor" href="#树"></a> 树</h2>
+<p>非线性结构</p>
+<h3 id="树-2"><a class="markdownIt-Anchor" href="#树-2"></a> 树</h3>
+<p>一棵树由若干子树构成，子树又由若干子子树构成</p>
+<h3 id="二叉树"><a class="markdownIt-Anchor" href="#二叉树"></a> 二叉树</h3>
+<p>1）节点和左右子树构成<br>
+2）第i层最多有2-(i-1)个节点<br>
+3）高度为k的二叉树最多有2-(k)-1个节点</p>
+<h3 id="二叉树存储"><a class="markdownIt-Anchor" href="#二叉树存储"></a> 二叉树存储</h3>
+<h4 id="顺序存储-3"><a class="markdownIt-Anchor" href="#顺序存储-3"></a> 顺序存储</h4>
+<p>按层顺序依次存储</p>
+<h4 id="链式存储-3"><a class="markdownIt-Anchor" href="#链式存储-3"></a> 链式存储</h4>
+<p>二叉或三叉链表存储</p>
+<h4 id="二叉树遍历"><a class="markdownIt-Anchor" href="#二叉树遍历"></a> 二叉树遍历</h4>
+<p>先序遍历、中序遍历、后续遍历</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public void order(Tree root) &#123;</span><br><span class="line">	if (root != null) &#123;</span><br><span class="line">        print(root-&gt;data)</span><br><span class="line">    	order(root-&gt;lchild)</span><br><span class="line">    	order(root-&gt;rchild)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="线索二叉树"><a class="markdownIt-Anchor" href="#线索二叉树"></a> 线索二叉树</h3>
+<p>Itag-lchild-data-rchild-rtag</p>
+<h3 id="最优二叉树哈夫曼树"><a class="markdownIt-Anchor" href="#最优二叉树哈夫曼树"></a> 最优二叉树(哈夫曼树)</h3>
+<p>带权路径最小的二叉树。</p>
+<h3 id="树和森林"><a class="markdownIt-Anchor" href="#树和森林"></a> 树和森林</h3>
+<h4 id="存储-5"><a class="markdownIt-Anchor" href="#存储-5"></a> 存储</h4>
+<p>1）双亲表示法<br>
+2）孩子表示法<br>
+3）孩子兄弟表示法(二叉链表表示法)</p>
+<h4 id="遍历"><a class="markdownIt-Anchor" href="#遍历"></a> 遍历</h4>
+<p>先根和后根</p>
+<h4 id="转化"><a class="markdownIt-Anchor" href="#转化"></a> 转化</h4>
+<p>1）树、森林转化成二叉树<br>
+孩子兄弟表示法转化二叉树<br>
+2）二叉树转化成树或森林<br>
+孩子兄弟表示法</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/03/数据结构/" data-id="cjn2xugrc00025prgx19srb2r" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-机器学习-11-通过MNIST了解卷积神经网络" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -160,7 +306,7 @@ units为指定当前层神经元个数为1024<br>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/18/机器学习-11-通过MNIST了解卷积神经网络/" data-id="cjhbt29nt00015vrg0k9z0mci" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/05/18/机器学习-11-通过MNIST了解卷积神经网络/" data-id="cjn2xugrf00045prgsbjpxtw6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -228,7 +374,7 @@ tensorflow支持两种创建模型，一种是已经为大家封装好的，一�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/20/入门实践-鸢尾花分类问题/" data-id="cjhbt29no00005vrg9ec84sub" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/04/20/入门实践-鸢尾花分类问题/" data-id="cjn2xugra00015prgh7opzz21" class="article-share-link">Share</a>
       
       
     </footer>
@@ -301,7 +447,7 @@ tensorflow支持两种创建模型，一种是已经为大家封装好的，一�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/30/机器学习—10-特征缩放和学习率/" data-id="cjhbt29nw00035vrgpt519szf" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/30/机器学习—10-特征缩放和学习率/" data-id="cjn2xugrg00055prgemrmd6va" class="article-share-link">Share</a>
       
       
     </footer>
@@ -353,7 +499,7 @@ tensorflow支持两种创建模型，一种是已经为大家封装好的，一�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/30/机器学习—9-多参的梯度下降/" data-id="cjhbt29o7000b5vrg4wotxdzu" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/30/机器学习—9-多参的梯度下降/" data-id="cjn2xugrv000d5prg6ajdpoge" class="article-share-link">Share</a>
       
       
     </footer>
@@ -473,7 +619,7 @@ close  %close the figure</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/" data-id="cjhbt29o5000a5vrgzvl6sm49" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/08/机器学习—8-Octave工具/" data-id="cjn2xugrw000e5prg61bd2k88" class="article-share-link">Share</a>
       
       
     </footer>
@@ -562,7 +708,7 @@ A^T = \begin{bmatrix} a &amp; d \\ b &amp; e \\ c &amp; f \end{bmatrix}
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/" data-id="cjhbt29o300095vrg6heqsf1u" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/04/机器学习—7-相关数学计算/" data-id="cjn2xugrn000b5prgovlm3ztr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -620,7 +766,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjhbt29o200085vrgdinjngap" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/03/机器学习—6-梯度下降/" data-id="cjn2xugrk00085prgaw7x2hmh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -676,133 +822,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cjhbt29o100075vrglllrsrys" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-机器学习—4-监督学习模型详解" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/11/机器学习—4-监督学习模型详解/" class="article-date">
-  <time datetime="2018-02-11T09:50:48.000Z" itemprop="datePublished">2018-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/11/机器学习—4-监督学习模型详解/">机器学习—4 监督学习模型详解</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>接下来我们学习第一个算法，线性回归算法，通过该算法我们也可以更好的理解监督学习。假设我们有如下数据：</p>
-<p><img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/1.png?raw=true" alt=""><br>
-这个是某市房屋大小与价格的统计图。根据这个图的数据，假设你有一个朋友想卖房子让你给评估一下房子价格，那么你如何去做呢？<br>
-你或许会构造一个模型，如下图，然后把你朋友的房子的大小输入模型值，该模型就会给出你朋友房子的预测价格。<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/2.png?raw=true" alt="红线为预测模型"><br>
-对于这样一个过程，我们就称作监督学习，我们使用已有数据集建立一个符合数据集的算法模型，然后通过该模型预测其他输入数据结果，即通过输入房子大小预测房屋价格。同时这也是一个回归模型，因为他的输出是连续的。<br>
-监督学习的工作方式<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/ML/3/3.png?raw=true" alt=""><br>
-通过大量数据集推导出学习算法，再由算法推导出公式h；通过房子大小套用公式算出房价预测值。<br>
-那我们如何表达这个公式h呢？</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>h</mi><mi>θ</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><msub><mi>θ</mi><mn>1</mn></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">h_\theta(x) = \theta_0 + \theta_1x 
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit">h</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.02778em;">θ</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">θ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">x</span></span></span></span></span></p>
-<p>OK,就到这里，下面将会讲解cost function。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/11/机器学习—4-监督学习模型详解/" data-id="cjhbt29o000065vrgctsjh9po" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-机器学习—3-测验" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/07/机器学习—3-测验/" class="article-date">
-  <time datetime="2018-02-07T13:33:40.000Z" itemprop="datePublished">2018-02-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/07/机器学习—3-测验/">机器学习一3 测验</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>
-<p>一个程序被认为能从经验E中学习，解决任务T，达到性能度量值P，当且仅当，有了经验E，经P判定，程序处理T时性能有所提升。假设我们有一个关于天气数据的学习算法，它被用于预测天气，那么你认为P是什么？</p>
-<p>a. 选项都不对</p>
-<p>b. 天气预测任务</p>
-<p>c. 预测天气的准确性</p>
-<p>d. 处理大量天气数据过程</p>
-</li>
-<li>
-<p>降雨一般用mm来测量。如果你开发了一个算法可以预测明天的降雨量，那这个算法属于什么？</p>
-<p>a. 回归算法</p>
-<p>b. 分类算法</p>
-</li>
-<li>
-<p>如果你的工作是股票预测，你想要开发一个算法来预测明天的股票价格。那么你觉得这是一个回归算法还是一个分类算法？</p>
-<p>a. 回归算法</p>
-<p>b. 分类算法</p>
-</li>
-<li>
-<p>有一些算法需要监督学习来处理，而另外一些需要非监督学习算法来处理。下面哪一种需要用监督学习算法？</p>
-<p>a. 给出关于1000名医疗患者如何对实验药物作出反应的数据（例如治疗的有效性，副作用等），从患者对药物的反应方面来看，是否存在不同的类别或“类型” 如果是这些类别是什么。</p>
-<p>b. 从一个人的遗传（DNA）数据，预测他/她在未来10年发展糖尿病的几率。</p>
-<p>c. 让计算机检查音乐片段的音频片段，并分类该音频片段中是否有人声（即人声唱歌），或者是否只是乐器（而不是人声）的片段。</p>
-<p>d. 鉴于来自患有心脏病的患者的医疗记录的大数据集，尝试了解是否可能存在不同的这样的患者群，为此我们可以量身定制单独的治疗方法。</p>
-</li>
-<li>
-<p>下面哪一个是机器学习的合理定义？</p>
-<p>a. 机器学习是允许机器人聪明行事的领域。</p>
-<p>b. 机器学习从有标签的数据中学习</p>
-<p>c. 机器学习是使计算机在没有明确程序下拥有学习能力的领域</p>
-<p>d. 机器学习是计算机编程的科学。</p>
-</li>
-</ol>
-<blockquote>
-<p>答案：</p>
-<ol>
-<li>c。对性能的度量</li>
-<li>a。连续输出值</li>
-<li>a。连续输出值</li>
-<li>b、c</li>
-<li>c</li>
-</ol>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/07/机器学习—3-测验/" data-id="cjhbt29ny00045vrg85zwzj49" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/02/24/机器学习—5-损失函数/" data-id="cjn2xugrl00095prgfr3ipt0x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -816,7 +836,7 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">weiter &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -827,15 +847,10 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
 
   
     
-
-  
-    
-  
-    
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li></ul>
     </div>
   </div>
 
@@ -843,9 +858,36 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/10/09/算法/">算法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/03/数据结构/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2018/05/18/机器学习-11-通过MNIST了解卷积神经网络/">机器学习-11-通过MNIST了解卷积神经网络</a>
@@ -857,14 +899,6 @@ OK，道理讲明白了，接下来我们加入算法来看一下。</p>
         
           <li>
             <a href="/2018/03/30/机器学习—10-特征缩放和学习率/">机器学习—10 特征缩放和学习率</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/30/机器学习—9-多参的梯度下降/">机器学习—9 多参的梯度下降</a>
-          </li>
-        
-          <li>
-            <a href="/2018/03/08/机器学习—8-Octave工具/">机器学习—8 Octave工具</a>
           </li>
         
       </ul>
