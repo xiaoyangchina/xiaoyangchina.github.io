@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>Git使用教程 | XiaoYang的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Git   git是一个分布式版本控制系统。   创建git库 a) 创建一个项目根目录  12mkdir democd demo/ b) 初始化git库  1git init 当前demo根目录初始化为git库，通过ls -la命令可以看到当前目录下生成了一个.git的隐藏文件夹。    添加文件 在根目录下创建一个readme.txt的文件，内容是hello,git!。接下来我们使用add命">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git使用教程">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/Git使用教程/index.html">
+<meta property="og:site_name" content="XiaoYang的博客">
+<meta property="og:description" content="Git   git是一个分布式版本控制系统。   创建git库 a) 创建一个项目根目录  12mkdir democd demo/ b) 初始化git库  1git init 当前demo根目录初始化为git库，通过ls -la命令可以看到当前目录下生成了一个.git的隐藏文件夹。    添加文件 在根目录下创建一个readme.txt的文件，内容是hello,git!。接下来我们使用add命">
+<meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/other/git_init.png?raw=true">
+<meta property="og:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/other/git_commit.png?raw=true">
+<meta property="og:updated_time" content="2018-11-14T14:01:40.934Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git使用教程">
+<meta name="twitter:description" content="Git   git是一个分布式版本控制系统。   创建git库 a) 创建一个项目根目录  12mkdir democd demo/ b) 初始化git库  1git init 当前demo根目录初始化为git库，通过ls -la命令可以看到当前目录下生成了一个.git的隐藏文件夹。    添加文件 在根目录下创建一个readme.txt的文件，内容是hello,git!。接下来我们使用add命">
+<meta name="twitter:image" content="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/other/git_init.png?raw=true">
+  
+    <link rel="alternate" href="/atom.xml" title="XiaoYang的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">XiaoYang的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">机器学习和Android</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Buscar"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Git使用教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/14/Git使用教程/" class="article-date">
+  <time datetime="2018-11-14T14:00:37.000Z" itemprop="datePublished">2018-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git使用教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git"><a class="markdownIt-Anchor" href="#git"></a> Git</h1>
+<ol>
+<li>
+<p>git是一个分布式版本控制系统。</p>
+</li>
+<li>
+<p>创建git库<br>
+a) 创建一个项目根目录</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir demo</span><br><span class="line">cd demo/</span><br></pre></td></tr></table></figure>
+<p>b) 初始化git库</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>当前demo根目录初始化为git库，通过<code>ls -la</code>命令可以看到当前目录下生成了一个<code>.git</code>的隐藏文件夹。<br>
+<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/other/git_init.png?raw=true" alt=""></p>
+</li>
+<li>
+<p>添加文件<br>
+在根目录下创建一个<code>readme.txt</code>的文件，内容是<code>hello,git!</code>。接下来我们使用<code>add</code>命令将文件添加到文件库中。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add readme.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>使用<code>commit</code>命令向git库进行提交</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;commit readme file&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>请务必填写提交内容相关的说明文字，即引号中的内容</p>
+</blockquote>
+<p>commit操作成功后你可以看到控制台输出如下<br>
+<img src="https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/other/git_commit.png?raw=true" alt=""></p>
+</li>
+</ol>
+<blockquote>
+<p>为什么git添加和提交要分成两步呢？这样做你就可以在多次<code>add</code>操作之后使用一次<code>commit</code>来统一提交。</p>
+</blockquote>
+<ol start="5">
+<li>查看文件修改状态</li>
+</ol>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+<p>可以看到当前在master分支，没有任何提交。<br>
+接下来我们对文件做一些修改，把readme.txt文件中内容改成“hello, i am git!”.再次使用‘status’命令查看一下：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for commit:</span><br><span class="line">		(use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">		(use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working 			directory)</span><br><span class="line"></span><br><span class="line">		modified:   readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+<p>这里的输出信息可以看到：<br>
+a) 我们在master分支<br>
+b) 发生了变化没有暂存的内容可以通过括号里面的方法处理，一个是<code>add</code>操作用来做<code>commit</code>，一个是使用<code>checkout</code>操作来消除之前你修改的这些变化。<br>
+c) 支持修改内容是readme.txt<br>
+d) 最后告诉大家你可以使用<code>add</code>和<code>commit</code>命令把没提交的内容提交了<br>
+但是，如果我们想要看看我们修改了什么，怎么办？使用‘diff’命令</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$git diff</span><br><span class="line">diff --git a/readme.txt b/readme.txt</span><br><span class="line">index f100ad9..bdca168 100644</span><br><span class="line">--- a/readme.txt</span><br><span class="line">+++ b/readme.txt</span><br><span class="line">@@ -1 +1 @@</span><br><span class="line">-hello,git!</span><br><span class="line">+hello,i am git!</span><br></pre></td></tr></table></figure>
+<p>这里就很明确的告诉了我们，文件内容发生了什么变化。<br>
+接下来我们执行<code>add</code>和<code>commit</code>命令进行提交了</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$git add readme.txt</span><br><span class="line">git commit -m &quot;change to &apos;i am git&apos;&quot;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>版本间切换<br>
+我们已经提交了两次内容，使用<code>log</code>命令查看。</li>
+</ol>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">commit 46687d7ad6475f296157b3efbf62e55be076f327</span><br><span class="line">Author: xiaoyang &lt;yangyang.xiao@263net.com&gt;</span><br><span class="line">Date:   Wed Nov 14 11:19:50 2018 +0800</span><br><span class="line"></span><br><span class="line">  	change to &apos;i am git&apos;</span><br><span class="line"></span><br><span class="line">commit 970c3c15e9c0dec4692b9d936abc90667f91b23f</span><br><span class="line">Author: xiaoyang &lt;yangyang.xiao@263net.com&gt;</span><br><span class="line">Date:   Wed Nov 14 10:26:59 2018 +0800</span><br><span class="line"></span><br><span class="line">  	commit readme file</span><br></pre></td></tr></table></figure>
+<p>我们可以看到两次提交的log了，如果我想把当前的版本回退到之前的那个怎么办？</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard 970c3c1</span><br><span class="line">HEAD is now at 970c3c1 commit readme file</span><br></pre></td></tr></table></figure>
+<p>查看一下文件内容。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat readme.txt </span><br><span class="line">hello,git!</span><br></pre></td></tr></table></figure>
+<p>是不是已经变回了最早的版本了。查看下log。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br><span class="line">commit 970c3c15e9c0dec4692b9d936abc90667f91b23f</span><br><span class="line">Author: xiaoyang &lt;yangyang.xiao@263net.com&gt;</span><br><span class="line">Date:   Wed Nov 14 10:26:59 2018 +0800</span><br><span class="line"></span><br><span class="line">  	commit readme file</span><br></pre></td></tr></table></figure>
+<p>不过话说回来，我们又不想在这个版本了，想回到最新的版本怎么办？这是就需要查看操作记录然后找到最新版本提交产生的id，再使用<code>reset</code>命令。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$git reflog</span><br><span class="line">970c3c1 HEAD@&#123;0&#125;: reset: moving to 970c3c1</span><br><span class="line">46687d7 HEAD@&#123;1&#125;: commit: change to &apos;i am git&apos;</span><br><span class="line">970c3c1 HEAD@&#123;2&#125;: commit (initial): commit readme file</span><br><span class="line"></span><br><span class="line">$git reset --hard 46687d7</span><br><span class="line">HEAD is now at 46687d7 change to &apos;i am git&apos;</span><br><span class="line"></span><br><span class="line">$cat readme.txt </span><br><span class="line">hello,i am git!</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>git add和git commit原理<br>
+我们先来看一下*.git*文件夹下面的内容：</li>
+</ol>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd .git/</span><br><span class="line">$ ls</span><br><span class="line">COMMIT_EDITMSG	branches	hooks		logs</span><br><span class="line">HEAD		config		index		objects</span><br><span class="line">ORIG_HEAD	description	info		refs</span><br></pre></td></tr></table></figure>
+<p>其中HEAD是指向master的指针，index是暂存区(stage)。<br>
+当我们执行<code>git add</code>命令后，我们修改的内容就存入了暂存区，你可以多次执行<code>git add</code>命令，它会全部存储在暂存区，最后我们执行<code>git commit</code>命令把暂存区的内容全部提交到我们master上去。</p>
+<ol start="8">
+<li>修改撤销<br>
+修改撤销一般分为未执行<code>git add</code>撤销和已执行撤销<br>
+未执行：通过<code>git checkout -- readme.txt</code>命令来恢复成与暂存区或分支版本一致的内容。<br>
+已执行：执行过之后，你修改的内容已存入暂存区，在这种情况下你需要先执行</li>
+</ol>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD readme.txt</span><br></pre></td></tr></table></figure>
+<p>该命令执行作用是将暂存区内的东西回退到非暂存状态，然后在按照未执行过<code>git add</code>命令的方法来处理，即执行<code>git checkout -- readme.txt</code>。</p>
+<ol start="9">
+<li>删除文件</li>
+</ol>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm filename</span><br><span class="line">git commit -m &quot;remove xxx file&quot;</span><br></pre></td></tr></table></figure>
+<ol start="10">
+<li>添加远程仓库</li>
+</ol>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/xiaoyangperfect/gitlearn.git</span><br></pre></td></tr></table></figure>
+<p>这时你已经连接了git仓库，然后把内容推送到仓库中。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>分支管理<br>
+首先我们创建一个新的分支<em>dev</em>，创建并切换到新分支</li>
+</ol>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
+<p>使用<code>git branch</code>命令查看当前分支状态</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* dev</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+<p>然后我们修改readme文件并提交。</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat readme.txt</span><br><span class="line">hello,i am git!</span><br><span class="line">test branch</span><br></pre></td></tr></table></figure>
+<p>切换回master分支并查看readme文件</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">$ cat readme</span><br><span class="line">hello,i am git!</span><br></pre></td></tr></table></figure>
+<p>使用<em>merge</em>进行合并</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git merge dev</span><br><span class="line">Updating 46687d7..5e7324d</span><br><span class="line">Fast-forward</span><br><span class="line"> 		readme.txt | 1 +</span><br><span class="line"> 		1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
+<p>合并成功后，我们就可以删除dev分支了。</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d dev</span><br><span class="line">$ git brach</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+<p>如果我们创建了dev分支进行了修改，与此同时master也做了修改，我们合并时会发生什么问题？</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">$ cat readme.txt </span><br><span class="line">hello,i am git!</span><br><span class="line">It&apos;s second line.</span><br><span class="line"></span><br><span class="line">$ git checkout dev</span><br><span class="line"></span><br><span class="line">$ git status</span><br><span class="line">On branch dev</span><br><span class="line"></span><br><span class="line">$ cat readme.txt</span><br><span class="line">hello,i am git!</span><br><span class="line">I am on dev.</span><br><span class="line"></span><br><span class="line">$ git checkout master</span><br><span class="line"></span><br><span class="line">$ git merge</span><br><span class="line"> Auto-merging readme.txt</span><br><span class="line">CONFLICT (content): Merge conflict in readme.txt</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+<p>显而易见自动合并失败了，这个时候我们需要手动修改出错文件readme.txt，在文件中会有*&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<em>和</em>=======<em>和</em>&gt;&gt;&gt;&gt;&gt;&gt;&gt;*这部分是冲突内容，我们手动解决就好了，然后重新执行<code>add</code>和<code>commit</code>命令，删除dev分支。</p>
+<p>使用<figure class="highlight plain"><figcaption><span>log --graph --pretty</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">12. Git标签</span><br><span class="line">	常用打标签命令有两种</span><br><span class="line">	```git tag v1.0</span><br></pre></td></tr></table></figure></p>
+<pre><code>在当前的提交处设置v1.0标签
+<figure class="highlight plain"><figcaption><span>tag v1.0 f0205317a9a16ee9bfb7a0098e96499ad6248f26```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在commit id为f0205317a9a16ee9bfb7a0098e96499ad6248f26处设置标签v1.0</span><br><span class="line">删除标签</span><br><span class="line">```git tag -d v1.0</span><br></pre></td></tr></table></figure>
+
+创建有信息的标签
+<figure class="highlight plain"><figcaption><span>tag -a v0.1 -m "version 0.1 released" 1094adb```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看指定标签</span><br><span class="line">```git show v0.1</span><br></pre></td></tr></table></figure>
+
+把标签推送到远程
+<figure class="highlight plain"><figcaption><span>push origin v0.1``或```git push origin --tags``</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">13. stash</span><br><span class="line">   当你在工作中手上有未完成的工作但又来了一个很重要的bug需要去处理怎么办？</span><br><span class="line">   我们可以先使用stash把未完成的工作存起来`git stash`,这个时候你使用`git status`可以看到我们的work tree是干净的，你就可以随意去切换分支工作了。</span><br><span class="line">   但当你fix掉了bug怎么恢复呢？</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>$ git stash list<br>
+stash@{0}: WIP on master: f020531 merge dev conflicts</p>
+<pre class="highlight"><code class="">然后使用`git stash pop`,OK你的工作现场恢复了。
+
+&gt; 使用`git stash apply stash@{0}`来单条恢复。
+
+-----
+## work flow
+![](https://github.com/xiaoyangchina/images/blob/master/blog_xiaoyangchina/other/HomePlusGitFlow.jpg?raw=true)
+基本上Git的work flow就是图上所示。
+Master分支是主分支，长期分支，用于代码发布，要求代码稳定，不可用于开发，每次发布版本创建相应Tag作为里程碑。版本发布的功能是由Develop分支已经完成测试的功能合并过来的。
+Develop分支，长期分支，开发主分支，所有开发features都是在该分支上进行。它是比较先进的分支，拥有最新的功能，主分支要发布版本的功能来源于该分支上。该分支上所合并的功能代码要求是经过测试和code review的。
+Hot Fix分支，短期分支，用于hot fix，由Master分支迁出，完成bug修复和测试后合并回Master分支，同时合并到Develop分支，然后删除。
+小明和小红分支，属于feature分支，当有新功能开发时，可以在Develop上迁出一个功能分支，这里的小明或小红应该改成feature命名的分支，如果仅需要个人开发只需要创建一个本地分支即可，如果需要合作开发就创建远程分支，在功能开发完并完成功能测试后合并回Develop上，同时删除该分支。</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/14/Git使用教程/" data-id="cjoh8imvh0004z4rgl7dxrif5" class="article-share-link">Compartir</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/12/Jetpack/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Viejo</strong>
+      <div class="article-nav-title">Jetpack</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nube de Tags</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivos</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Posts recientes</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/14/Git使用教程/">Git使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/12/Jetpack/">Jetpack</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/09/算法/">算法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/03/数据结构/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/18/机器学习-11-通过MNIST了解卷积神经网络/">机器学习-11-通过MNIST了解卷积神经网络</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 XiaoYang<br>
+      Construido por <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
